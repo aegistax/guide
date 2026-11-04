@@ -521,20 +521,19 @@
         <span class="calc-chev">⌄</span>
       </button>
       <div class="calc-body" hidden>
-        <p class="calc-desc">사업자등록번호 10자리를 입력하면 번호가 올바른 형식인지 검증하고, 개인·법인 등 사업자 구분을 확인합니다. 휴업·폐업 여부는 아래 홈택스 조회를 이용해 주세요.</p>
+        <p class="calc-desc">사업자등록번호 10자리를 입력하고 <strong>조회</strong>를 누르면 국세청 자료로 납세자 상태(계속·휴업·폐업), 과세유형(일반·간이 등), 폐업일, 과세유형 전환일을 보여줍니다.</p>
         <div class="field-row">
           <div class="field">
             <label>사업자등록번호</label>
-            <div class="input-wrap"><input type="text" inputmode="numeric" id="brn-input" placeholder="000-00-00000" maxlength="12" autocomplete="off"></div>
+            <div style="display:flex; gap:8px; align-items:stretch;"><div class="input-wrap" style="flex:1; min-width:0;"><input type="text" inputmode="numeric" id="brn-input" placeholder="000-00-00000" maxlength="12" autocomplete="off"></div><button type="button" class="copy-btn" id="brn-query" disabled style="padding:0 22px; font-size:14px; font-weight:700; flex:none;">조회</button></div>
           </div>
         </div>
         <div class="result-box">
-          <div class="result-grid">
+          <div class="result-grid" hidden>
             <div class="result-item hl"><div class="rl">번호 유효성</div><div class="rv" id="brn-valid">-</div></div>
             <div class="result-item"><div class="rl">사업자 구분</div><div class="rv" id="brn-type" style="font-size:14px;">-</div></div>
             <div class="result-item"><div class="rl">등록 세무서 코드 (앞 3자리)</div><div class="rv" id="brn-office">-</div></div>
           </div>
-          <p class="result-note">번호 체계(검증번호)와 법인·개인 구분만 확인합니다. 일반과세자/간이과세자 여부와 휴업·폐업 상태는 번호 자체에 담겨 있지 않아 국세청 자료(홈택스 조회)로만 확인할 수 있습니다.</p>
           <div class="result-grid" id="brn-nts" style="margin-top:14px;" hidden>
             <div class="result-item hl"><div class="rl">납세자 상태 (국세청)</div><div class="rv" id="brn-stt">-</div></div>
             <div class="result-item"><div class="rl">과세유형 (국세청)</div><div class="rv" id="brn-tax" style="font-size:14px;">-</div></div>
@@ -542,11 +541,6 @@
             <div class="result-item"><div class="rl">과세유형 전환일</div><div class="rv" id="brn-taxchg">-</div></div>
           </div>
           <p class="result-note" id="brn-msg" hidden></p>
-          <div class="copy-row" style="justify-content:flex-start; gap:8px; flex-wrap:wrap;">
-            <button type="button" class="copy-btn" id="brn-query" disabled>국세청 상태조회</button>
-            <a class="copy-btn" id="brn-hometax" href="https://hometax.go.kr" target="_blank" rel="noopener" style="text-decoration:none;">홈택스에서 휴·폐업 상태 조회 ↗</a>
-          </div>
-          <p class="result-note" style="margin-top:8px;">홈택스 접속 후 <strong>조회/발급 &gt; 사업자상태</strong> 메뉴에서 로그인 없이 사업자등록번호로 조회할 수 있습니다.</p>
         </div>
       </div>
     </div>
@@ -1070,9 +1064,11 @@
     vEl.style.color = ok ? '' : '#b3261e';
     tEl.textContent = ok ? typeOf(d.slice(3,5)) : '-';
     oEl.textContent = ok ? d.slice(0,3) : '-';
-    qBtn.disabled = !ok; nts.hidden = true; msg.hidden = true;
+    qBtn.disabled = !ok; nts.hidden = true;
+    if(ok){ msg.hidden = true; } else { msg.textContent = '올바르지 않은 사업자등록번호입니다. 번호를 다시 확인해 주세요.'; msg.hidden = false; }
   }
   inp.addEventListener('input', run);
+  inp.addEventListener('keydown', function(e){ if(e.key==='Enter' && !qBtn.disabled){ e.preventDefault(); qBtn.click(); } });
   function say(t){ msg.textContent = t; msg.hidden = false; }
   function fmtDate(v){ v = (v||'').replace(/\D/g,''); return v.length===8 ? v.slice(0,4)+'-'+v.slice(4,6)+'-'+v.slice(6) : '-'; }
   qBtn.addEventListener('click', function(){
@@ -1287,6 +1283,7 @@
   }
   Array.prototype.forEach.call(document.querySelectorAll('.calc-card'), function(card){
     var box = card.querySelector('.result-box'); if(!box) return;
+    if(box.querySelector('#brn-input, #brn-nts') || card.querySelector('#brn-input')) return;
     var row = document.createElement('div'); row.className = 'copy-row';
     var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'copy-btn';
     var label = '계산 결과 복사';
