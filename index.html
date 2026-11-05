@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026 세무 일정 | 이지스 고객 가이드</title><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>이지스 고객 가이드</title><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
 
 
 <style>
@@ -30,7 +30,6 @@
   *{box-sizing:border-box;}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:'Noto Sans KR',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
   h1,h2,h3,h4{font-family:'Noto Sans KR',sans-serif; text-wrap:balance; margin:0; color:var(--ink);}
-  .mono{font-family:'Noto Sans KR',sans-serif; font-variant-numeric:tabular-nums;}
   a{color:inherit;}
   .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
   .topbar{position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
@@ -67,41 +66,46 @@
   .hero h1{font-size:clamp(26px,4vw,36px); font-weight:700;}
   .hero-lede{margin-top:14px; max-width:64ch; color:var(--ink-soft); font-size:15px;}
   section{padding:40px 0;}
-  section + section{border-top:1px solid var(--line);}
-  .subhead{font-size:15px; font-weight:600; margin:28px 0 12px; font-family:'Noto Sans KR',sans-serif;}
-  .subhead:first-child{margin-top:0;}
-  p.body-text{font-size:14px; color:var(--ink-soft); max-width:68ch; margin:0 0 10px;}
-  table{width:100%; border-collapse:collapse; font-size:14px;}
-  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow);}
-  th,td{padding:10px 14px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap;}
-  thead th{font-size:12px; color:var(--ink-faint); font-weight:600; letter-spacing:.02em; background:var(--surface-2);}
-  tbody tr:last-child td{border-bottom:none;}
-  td.num, th.num{font-family:'Noto Sans KR',sans-serif; font-variant-numeric:tabular-nums;}
-  .table-cap{font-size:12px; color:var(--ink-faint); margin:8px 0 0;}
-  .this-month{background:linear-gradient(135deg,#2f6fb0,#63a6e0); border:1px solid transparent; border-radius:16px; padding:20px 24px; margin-bottom:32px; box-shadow:0 4px 14px rgba(47,111,176,.32); animation:thisMonthGlow 2.4s ease-in-out infinite;}
-  @keyframes thisMonthGlow{
-    0%,100%{box-shadow:0 4px 14px rgba(47,111,176,.32), 0 0 0 0 rgba(255,255,255,.22);}
-    50%{box-shadow:0 4px 14px rgba(47,111,176,.32), 0 0 0 8px rgba(255,255,255,0);}
+  .form-filter{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px;}
+  .filter-pill{font-size:13px; font-weight:600; padding:9px 18px; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-soft); cursor:pointer; transition:border-color .15s, color .15s, background .15s; font-family:'Noto Sans KR',sans-serif;}
+  .filter-pill:hover{border-color:var(--accent);}
+  .filter-pill.active{background:var(--accent-soft); color:var(--accent-ink); border-color:var(--accent);}
+  .form-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;}
+  .form-card{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:10px; transition:border-color .2s ease, box-shadow .2s ease;}
+  .form-card:hover{border-color:var(--accent); box-shadow:var(--shadow), 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); animation:formCardPulse 1.6s ease-in-out infinite;}
+  .form-card:hover h4{color:var(--accent-ink);}
+  @keyframes formCardPulse{
+    0%,100%{box-shadow:var(--shadow), 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);}
+    50%{box-shadow:var(--shadow), 0 0 0 5px color-mix(in srgb, var(--accent) 6%, transparent);}
   }
-  .tm-eyebrow{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#fff; opacity:.85; margin-bottom:8px;}
-  .this-month h3{font-size:18px; font-weight:700; margin-bottom:12px; color:#fff;}
-  .tm-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px;}
-  .tm-list li{font-size:14px; color:#1c2438; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 13px; background:#fff; border-radius:8px;}
-  .tm-list li .tm-tag{font-size:12px; font-weight:600; color:#fff; background:#2f6fb0; padding:2px 8px; border-radius:999px; margin-right:8px;}
-  .tm-list li .tm-date{font-weight:600; color:#1c2438; white-space:nowrap;}
-  .tm-empty{font-size:14px; color:#fff; opacity:.85;}
-  .tax-group + .tax-group{margin-top:44px; padding-top:40px; border-top:1px solid var(--line);}
-  .group-head{font-size:20px; font-weight:700; padding-bottom:14px; margin-bottom:8px; border-bottom:2px solid var(--accent);}
-  .callout{border:1px solid var(--line); border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 12px 12px 0; padding:14px 18px; font-size:14px; color:var(--ink-soft); margin-bottom:20px;}
-  .callout strong{color:var(--ink);}
-  .foot-note{font-size:12px; color:var(--ink-faint); margin-top:12px; max-width:70ch;}
+  .form-dl-row{margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;}
+  .form-dl-btn{align-self:flex-start; font-size:12px; font-weight:600; padding:6px 13px; border-radius:999px; border:1px solid var(--accent); background:var(--accent-soft); color:var(--accent-ink); cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; transition:background .15s, box-shadow .15s;}
+  .form-dl-btn:hover{background:var(--accent); color:#fff;}
+  .form-dl-btn:disabled{opacity:.5; cursor:default;}
+  .form-dl-xlsx{border-color:#2e7d46; background:color-mix(in srgb, #2e7d46 14%, transparent); color:#1f6e38;}
+  .form-dl-xlsx:hover{background:#2e7d46; color:#fff;}
+  .form-dl-pdf{border-color:#c1372b; background:color-mix(in srgb, #c1372b 14%, transparent); color:#a52c22;}
+  .form-dl-pdf:hover{background:#c1372b; color:#fff;}
+  .form-dl-word{border-color:#2b5aa5; background:color-mix(in srgb, #2b5aa5 14%, transparent); color:#22488a;}
+  .form-dl-word:hover{background:#2b5aa5; color:#fff;}
+  .form-dl-hwp{border-color:#4ea6e6; background:color-mix(in srgb, #4ea6e6 16%, transparent); color:#2b7cc4;}
+  .form-dl-hwp:hover{background:#4ea6e6; color:#fff;}
+  .form-dl-gray{border-color:var(--ink-faint); background:var(--surface-2); color:var(--ink-soft);}
+  .form-dl-gray:hover{background:var(--ink-faint); color:#fff;}
+  .form-tags{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+  .tag{font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; white-space:nowrap;}
+  .tag-cat{background:var(--accent-soft); color:var(--accent-ink);}
+  .tag-sub{background:var(--surface-2); color:var(--ink-soft); border:1px solid var(--line);}
+  .tag-doc{background:none; color:var(--ink-faint); border:1px solid var(--line); display:inline-flex; align-items:center; gap:3px;}
+  .form-card h4{font-size:16px; font-weight:700; font-family:'Noto Sans KR',sans-serif; margin:0; transition:color .2s ease;}
+  .form-card p{font-size:13px; color:var(--ink-soft); margin:0;}
+  .callout{border:1px solid var(--line); border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 12px 12px 0; padding:14px 18px; font-size:14px; color:var(--ink-soft); margin-bottom:24px;}
   footer{padding:40px 0 48px; background:var(--footer-bg); border-top:1px solid var(--line);}
   .office-box{padding:0;}
   .office-box h3{font-size:15px; font-weight:600;}
   .office-box .meta{font-size:13px; color:var(--ink-soft); margin-top:8px; line-height:1.8;}
   .disclaimer{font-size:12px; color:var(--ink-faint); line-height:1.7; margin-top:14px; padding-top:14px; border-top:1px dashed var(--line);}
   .bottom-line{margin-top:16px; font-size:12px; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
-  @media (max-width:640px){ table{font-size:13px;} }
 
   .topbar-actions{display:flex; align-items:center; gap:10px; flex:0 0 auto;}
   .theme-toggle{flex:0 0 auto; width:26px; height:26px; border:none; background:none; padding:0; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--ink-faint); transition:color .15s;}
@@ -124,7 +128,7 @@
     <div class="nav-group">
       <button type="button" class="nav-group-btn">공지·일정</button>
       <div class="nav-dropdown">
-        <a href="index.html">세무일정</a>
+        <a href="schedule.html">세무일정</a>
       </div>
     </div>
     <div class="nav-group">
@@ -141,40 +145,29 @@
   </div>
 </div>
 
-<header class="hero">
+<section class="hm">
   <div class="wrap">
-    <div class="eyebrow">세무 일정</div>
-    <h1><span id="yr-h1">2026</span>년 세무 일정</h1>
-<script>(function(){var y=new Date().getFullYear(),e=document.getElementById("yr-h1");if(e)e.textContent=y;document.title=document.title.replace(/20\d\d/,y);})();</script>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <div class="this-month" id="this-month">
-      <div class="tm-eyebrow">이번 달 세무일정</div>
-      <h3 id="tm-title">—</h3>
-      <ul class="tm-list" id="tm-list"></ul>
+    <h1 class="hm-title">대표님들이 가장 많이 찾는<br><span class="hm-grad">세무·노무 정보</span>를 한 곳에.</h1>
+    <div class="hm-grid">
+      <a class="hm-card hm-c-light" href="schedule.html">
+        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ff4f7b"/></linearGradient></defs><rect x="8" y="12" width="48" height="44" rx="10" fill="#fff"/><path d="M8 22a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v6H8z" fill="url(#hg2)"/><rect x="20" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><rect x="39" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><g fill="#d9dcea"><circle cx="20" cy="36" r="3"/><circle cx="29" cy="36" r="3"/><circle cx="38" cy="36" r="3"/><circle cx="47" cy="36" r="3"/><circle cx="20" cy="46" r="3"/><circle cx="29" cy="46" r="3"/><circle cx="47" cy="46" r="3"/></g><circle cx="38" cy="46" r="6" fill="#6a4cff"/><path d="M35 46l2.2 2.2L41.5 43.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>세무일정</h2>
+        <p>사업자에게 꼭 필요한<br>세무일정을 한눈에 확인</p>
+        <div class="hm-chips"><span>신고·납부 기한</span></div>
+      </a>
+      <a class="hm-card hm-c-purple" href="calculator.html">
+        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6bff"/><stop offset="1" stop-color="#4f8bff"/></linearGradient></defs><rect x="12" y="6" width="40" height="52" rx="9" fill="#fff"/><rect x="18" y="12" width="28" height="12" rx="4" fill="url(#hg1)"/><g fill="#d9dcea"><rect x="18" y="29" width="8" height="7" rx="2.5"/><rect x="28" y="29" width="8" height="7" rx="2.5"/><rect x="38" y="29" width="8" height="7" rx="2.5"/><rect x="18" y="39" width="8" height="7" rx="2.5"/><rect x="28" y="39" width="8" height="7" rx="2.5"/><rect x="18" y="49" width="8" height="4" rx="2"/><rect x="28" y="49" width="8" height="4" rx="2"/></g><rect x="38" y="39" width="8" height="14" rx="2.5" fill="#ff7a3d"/></svg></div>
+        <h2>세금·노무 간편 계산기</h2>
+        <p>복잡한 계산, 숫자만 넣으면 바로</p>
+        <div class="hm-chips"><span>4대보험료</span><span>원천징수</span><span>주휴수당</span><span>퇴직금</span></div>
+      </a>
+      <a class="hm-card hm-c-orange" href="consult.html">
+        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><path d="M14 10h36a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H30l-12 10v-10h-4a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8z" fill="#fff"/><circle cx="22" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="32" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="42" cy="29" r="3.4" fill="url(#hg3)"/></svg></div>
+        <h2>상담하기</h2>
+        <p>궁금한 점은<br>편하게 문의해 주세요</p>
+        <div class="hm-chips"><span>전화</span><span>카카오톡</span><span>방문</span><span>온라인 신청</span></div>
+      </a>
     </div>
-
-    <div class="ov" id="ov">
-      <div class="ov-top">
-        <h2 class="ov-title">세무일정 한눈에 보기</h2>
-        <div class="ov-seg" id="ov-seg" role="tablist">
-          <button type="button" class="ov-seg-btn on" data-v="month" role="tab" aria-selected="true">월별</button>
-          <button type="button" class="ov-seg-btn" data-v="type" role="tab" aria-selected="false">사업자 유형별</button>
-        </div>
-      </div>
-      <div class="ov-seg ov-seg-sub" id="ov-seg-type" role="tablist" hidden>
-        <button type="button" class="ov-seg-btn on" data-t="개인" role="tab" aria-selected="true">개인 사업자</button>
-        <button type="button" class="ov-seg-btn" data-t="법인" role="tab" aria-selected="false">법인 사업자</button>
-      </div>
-      <div id="ov-body"></div>
-      <p class="ov-recur">매월 10일 · 원천세(전월 지급분), 4대보험 납부, 세금계산서 발급(전월 공급분)은 매달 반복되므로 아래 일정에서는 생략했습니다.</p>
-      <p class="ov-cap" id="ov-cap"></p>
-    </div>
-
-    
   </div>
 </section>
 
@@ -195,37 +188,33 @@
   </div>
 </footer>
 <style>
-.ov{margin:0 0 36px;}
-.ov-top{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
-.ov-title{font-size:20px; font-weight:700; margin:0;}
-.ov-seg{display:inline-flex; gap:2px; padding:4px; border-radius:12px; background:var(--surface-2); border:1px solid var(--line);}
-.ov-seg[hidden]{display:none;}
-.ov-seg-sub{margin:0 0 14px;}
-.ov-seg-btn{font-family:'Noto Sans KR',sans-serif; font-size:13px; font-weight:600; padding:8px 16px; border:none; border-radius:8px; background:none; color:var(--ink-soft); cursor:pointer;}
-.ov-seg-btn:hover{color:var(--accent-ink);}
-.ov-seg-btn.on{background:linear-gradient(135deg,#2f6fb0,#63a6e0); color:#fff; box-shadow:0 1px 4px rgba(47,111,176,.3);}
-.ov-recur,.ov-cap{font-size:12px; line-height:1.4; color:var(--ink-faint); margin:0;} .ov-recur{margin-top:14px;} .ov-cap{margin-top:4px;}
-.ov-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;}
-.ov-card,.ov-trow{border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:var(--surface);}
-.ov-card.now,.ov-trow.now{border-color:var(--accent); background:var(--accent-soft);}
-.ov-mh{display:flex; align-items:center; gap:8px; font-size:15px; margin-bottom:8px;}
-.ov-now{font-size:12px; font-weight:600; color:#fff; background:#2f6fb0; padding:2px 8px; border-radius:999px;}
-.ov-card ul,.ov-trow ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
-.ov-card li,.ov-trow li{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; font-size:14px;}
-.ov-l{display:flex; align-items:flex-start; gap:8px; min-width:0;}
-.ov-d{font-weight:600; white-space:nowrap; text-align:right;}
-.ov-sub{display:block; font-size:12px; font-weight:400; color:var(--ink-faint); margin-top:1px;}
-.ov-tag{flex:none; font-size:12px; font-weight:600; padding:2px 8px; border-radius:999px; color:#fff;}
-.ov-tag-c{background:#7b8496;} .ov-tag-p{background:#2f6fb0;} .ov-tag-b{background:#4f5f86;}
-.ov-none{margin:0; font-size:14px; color:var(--ink-faint);}
-.ov-tl{display:flex; flex-direction:column; gap:12px;}
-.ov-trow{display:flex; gap:16px; align-items:flex-start;}
-.ov-tm{flex:none; width:64px; font-size:15px; font-weight:700; display:flex; flex-direction:column; gap:6px; align-items:flex-start;}
-.ov-trow ul{flex:1; min-width:0;}
-
-@media (max-width:640px){ .ov-trow{flex-direction:column; gap:8px;} .ov-tm{width:auto; flex-direction:row; align-items:center;} }
+.hm{padding:56px 0 64px;}
+.hm-title{text-align:center; font-size:clamp(26px,5.2vw,40px); font-weight:800; line-height:1.32; letter-spacing:-.02em; margin:0 0 40px; color:var(--ink);}
+.hm-grad{background:linear-gradient(90deg,#2a7bff,#8b5cf6 55%,#ec4899); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.hm-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;}
+.hm-card{display:flex; flex-direction:column; align-items:center; text-align:center; text-decoration:none; padding:36px 20px 30px; border-radius:16px; min-height:340px; transition:transform .18s, box-shadow .18s;}
+.hm-card:hover{transform:translateY(-4px);}
+.hm-ic{width:84px; height:84px; margin-bottom:22px; filter:drop-shadow(0 6px 10px rgba(30,30,80,.22));}
+.hm-ic svg{width:100%; height:100%; display:block;}
+.hm-card h2{font-size:20px; font-weight:800; margin:0 0 8px; letter-spacing:-.01em;}
+.hm-card p{font-size:14px; line-height:1.6; margin:0 0 18px;}
+.hm-chips{display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:auto;}
+.hm-chips span{font-size:13px; font-weight:700; padding:7px 14px; border-radius:999px;}
+.hm-c-light{background:linear-gradient(160deg,var(--surface-2),var(--surface)); border:1px solid var(--line); color:var(--ink);}
+.hm-c-light p{color:var(--ink-soft);}
+.hm-c-light .hm-chips span{background:var(--surface); color:#5b3fe0; box-shadow:0 1px 4px rgba(40,40,100,.12);}
+.hm-c-light:hover{box-shadow:0 10px 24px rgba(40,40,100,.14);}
+.hm-c-purple{background:linear-gradient(160deg,#a78bfa,#7c5cff 55%,#5b3fe0); color:#fff;}
+.hm-c-purple p{color:rgba(255,255,255,.92);}
+.hm-c-purple .hm-chips span{background:rgba(255,255,255,.22); color:#fff;}
+.hm-c-purple:hover{box-shadow:0 12px 28px rgba(91,63,224,.38);}
+.hm-c-orange{background:linear-gradient(160deg,#ffd6b0,#ffab6b 55%,#ff8a4c); color:#3b2314;}
+.hm-c-orange p{color:rgba(59,35,20,.85);}
+.hm-c-orange .hm-chips span{background:rgba(255,255,255,.6); color:#9a3f10;}
+.hm-c-orange:hover{box-shadow:0 12px 28px rgba(255,138,76,.38);}
+@media (max-width:860px){ .hm-grid{grid-template-columns:1fr;} .hm-card{min-height:0; padding:28px 20px 24px;} .hm-ic{width:72px; height:72px; margin-bottom:16px;} .hm{padding:40px 0 48px;} }
+@media (prefers-reduced-motion:reduce){ .hm-card{transition:none;} .hm-card:hover{transform:none;} }
 </style>
-<style>.tm-list li .tm-date{text-align:right;}.tm-list{gap:10px;} .this-month{background:linear-gradient(120deg,#2f6fb0,#63a6e0,#3f7fc4,#7bb6ea,#2f6fb0); background-size:300% 300%; animation:thisMonthGlow 2.4s ease-in-out infinite, tmFlow 9s ease-in-out infinite;} @keyframes tmFlow{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}} @media (prefers-reduced-motion:reduce){.this-month{animation:none;}}  .tm-sub{display:block; font-size:12px; font-weight:400; color:#7b8496; margin-top:2px;}</style>
 
 <script>
 (function(){
@@ -257,138 +246,6 @@
 
 <script>
 (function(){
-  var SCHEDULE = {
-    1:  [{tag:'공통', label:'원천세 (12월 지급분)', date:'1월 10일'}, {tag:'공통', label:'4대보험 납부 (12월분)', date:'1월 10일'}, {tag:'공통', label:'세금계산서 발급 (12월 공급분)', date:'1월 10일'}, {tag:'공통', label:'부가가치세 2기 확정신고', date:'1월 25일'}],
-    2:  [{tag:'공통', label:'원천세 (1월 지급분)', date:'2월 10일'}, {tag:'공통', label:'4대보험 납부 (1월분)', date:'2월 10일'}, {tag:'공통', label:'세금계산서 발급 (1월 공급분)', date:'2월 10일'}, {tag:'개인', label:'사업장현황신고 (면세사업자)', date:'2월 10일'}],
-    3:  [{tag:'공통', label:'원천세 (2월 지급분)', date:'3월 10일'}, {tag:'공통', label:'4대보험 납부 (2월분)', date:'3월 10일'}, {tag:'공통', label:'세금계산서 발급 (2월 공급분)', date:'3월 10일'}, {tag:'법인', label:'법인세 신고·납부(일반 법인)', date:'3월 31일'}],
-    4:  [{tag:'공통', label:'원천세 (3월 지급분)', date:'4월 10일'}, {tag:'공통', label:'4대보험 납부 (3월분)', date:'4월 10일'}, {tag:'공통', label:'세금계산서 발급 (3월 공급분)', date:'4월 10일'}, {tag:'법인', label:'부가가치세 1기 예정신고', date:'4월 25일'}, {tag:'개인', label:'부가세 예정고지(일반과세자)', date:'4월 25일'}, {tag:'법인', label:'법인세 신고·납부(성실신고 법인)', date:'4월 30일'}],
-    5:  [{tag:'공통', label:'원천세 (4월 지급분)', date:'5월 10일'}, {tag:'공통', label:'4대보험 납부 (4월분)', date:'5월 10일'}, {tag:'공통', label:'세금계산서 발급 (4월 공급분)', date:'5월 10일'}, {tag:'개인', label:'종합소득세 신고·납부(일반)', date:'5월 31일'}],
-    6:  [{tag:'공통', label:'원천세 (5월 지급분)', date:'6월 10일'}, {tag:'공통', label:'4대보험 납부 (5월분)', date:'6월 10일'}, {tag:'공통', label:'세금계산서 발급 (5월 공급분)', date:'6월 10일'}, {tag:'개인', label:'종합소득세 신고·납부(성실신고)', date:'6월 30일'}],
-    7:  [{tag:'공통', label:'원천세 (6월 지급분)', date:'7월 10일'}, {tag:'공통', label:'4대보험 납부 (6월분)', date:'7월 10일'}, {tag:'공통', label:'세금계산서 발급 (6월 공급분)', date:'7월 10일'}, {tag:'공통', label:'부가가치세 1기 확정신고', date:'7월 25일'}],
-    8:  [{tag:'공통', label:'원천세 (7월 지급분)', date:'8월 10일'}, {tag:'공통', label:'4대보험 납부 (7월분)', date:'8월 10일'}, {tag:'공통', label:'세금계산서 발급 (7월 공급분)', date:'8월 10일'}, {tag:'법인', label:'법인세 중간예납(12월 결산법인)', date:'8월 31일'}],
-    9:  [{tag:'공통', label:'원천세 (8월 지급분)', date:'9월 10일'}, {tag:'공통', label:'4대보험 납부 (8월분)', date:'9월 10일'}, {tag:'공통', label:'세금계산서 발급 (8월 공급분)', date:'9월 10일'}, {tag:'공통', label:'재산세 납부(주택 2기분·건축물 등)', date:'9월 30일'}],
-    10: [{tag:'공통', label:'원천세 (9월 지급분)', date:'10월 10일'}, {tag:'공통', label:'4대보험 납부 (9월분)', date:'10월 10일'}, {tag:'공통', label:'세금계산서 발급 (9월 공급분)', date:'10월 10일'}, {tag:'법인', label:'부가가치세 2기 예정신고', date:'10월 25일'}, {tag:'개인', label:'부가세 예정고지(일반과세자)', date:'10월 25일'}],
-    11: [{tag:'공통', label:'원천세 (10월 지급분)', date:'11월 10일'}, {tag:'공통', label:'4대보험 납부 (10월분)', date:'11월 10일'}, {tag:'공통', label:'세금계산서 발급 (10월 공급분)', date:'11월 10일'}, {tag:'개인', label:'종합소득세 중간예납', date:'11월 30일'}],
-    12: [{tag:'공통', label:'원천세 (11월 지급분)', date:'12월 10일'}, {tag:'공통', label:'4대보험 납부 (11월분)', date:'12월 10일'}, {tag:'공통', label:'세금계산서 발급 (11월 공급분)', date:'12월 10일'}]
-  };
-
-  var HOLIDAYS = {
-    2026:['01-01','02-16','02-17','02-18','03-01','03-02','05-05','05-24','05-25','06-03','06-06','07-17','08-15','08-17','09-24','09-25','09-26','10-03','10-05','10-09','12-25'],
-    2027:['01-01','02-06','02-07','02-08','02-09','03-01','05-03','05-05','05-13','06-06','07-17','07-19','08-15','08-16','09-14','09-15','09-16','10-03','10-04','10-09','10-11','12-25','12-27']
-  };
-  var DOW = ['일','월','화','수','목','금','토'];
-  function pad(n){ return (n<10?'0':'')+n; }
-  function isOff(dt){
-    var w = dt.getDay();
-    if(w===0 || w===6) return true;
-    var list = HOLIDAYS[dt.getFullYear()];
-    return !!list && list.indexOf(pad(dt.getMonth()+1)+'-'+pad(dt.getDate())) >= 0;
-  }
-  function actualDue(str){
-    var m = /(\d+)월\s*(\d+)일/.exec(str);
-    if(!m) return null;
-    var y = new Date().getFullYear(), mm = +m[1], dd = +m[2];
-    var base = new Date(y, mm-1, dd), dt = new Date(y, mm-1, dd), shifted = false;
-    while(isOff(dt)){ dt.setDate(dt.getDate()+1); shifted = true; }
-    return {text:(dt.getMonth()+1)+'월 '+dt.getDate()+'일('+DOW[dt.getDay()]+')', shifted:shifted, base:mm+'/'+dd+'('+DOW[base.getDay()]+')'};
-  }
-
-  function renderThisMonth(){
-    var titleEl = document.getElementById('tm-title');
-    var listEl = document.getElementById('tm-list');
-    if(!titleEl || !listEl) return;
-    var month = new Date().getMonth() + 1;
-    titleEl.textContent = month + '월 세무일정';
-    var items = SCHEDULE[month] || [];
-    listEl.innerHTML = '';
-    if(items.length === 0){
-      var empty = document.createElement('li');
-      empty.className = 'tm-empty';
-      empty.textContent = '이번 달은 별도 신고 일정이 없습니다.';
-      listEl.appendChild(empty);
-      return;
-    }
-    items.forEach(function(item){
-      var li = document.createElement('li');
-      var left = document.createElement('span');
-      left.innerHTML = '<span class="tm-tag">' + item.tag + '</span>' + item.label;
-      var right = document.createElement('span');
-      right.className = 'tm-date';
-      var ad = actualDue(item.date);
-      if(ad){
-        right.textContent = ad.text;
-      } else { right.textContent = item.date; }
-      li.appendChild(left);
-      li.appendChild(right);
-      listEl.appendChild(li);
-    });
-  }
-
-  renderThisMonth();
-
-  var RECUR = /^(원천세|4대보험 납부|세금계산서 발급)/;
-  var ovView = 'month', ovType = '개인';
-  function dateHtml(ds){
-    var ad = actualDue(ds);
-    if(!ad) return ds;
-    return ad.text;
-  }
-  function rowHtml(it){
-    return '<li><span class="ov-l"><span class="ov-tag ov-tag-' + (it.tag==='공통'?'c':(it.tag==='개인'?'p':'b')) + '">' + it.tag + '</span>' + it.label + '</span><span class="ov-d">' + dateHtml(it.date) + '</span></li>';
-  }
-  function yearItems(m, type){
-    return (SCHEDULE[m]||[]).filter(function(it){
-      if(RECUR.test(it.label)) return false;
-      return !type || it.tag==='공통' || it.tag===type;
-    });
-  }
-  function renderOverview(){
-    var body = document.getElementById('ov-body'); if(!body) return;
-    var cur = new Date().getMonth()+1, html = '';
-    document.getElementById('ov-seg-type').hidden = (ovView!=='type');
-    if(ovView==='month'){
-      html = '<div class="ov-grid">';
-      for(var m=1;m<=12;m++){
-        var its = yearItems(m, null);
-        html += '<div class="ov-card' + (m===cur?' now':'') + '"><div class="ov-mh"><b>' + m + '월</b>' + (m===cur?'<span class="ov-now">이번 달</span>':'') + '</div>';
-        html += its.length ? '<ul>' + its.map(rowHtml).join('') + '</ul>' : '<p class="ov-none">별도 신고 일정 없음</p>';
-        html += '</div>';
-      }
-      html += '</div>';
-    } else {
-      html = '<div class="ov-tl">';
-      for(var m2=1;m2<=12;m2++){
-        var its2 = yearItems(m2, ovType);
-        if(!its2.length) continue;
-        html += '<div class="ov-trow' + (m2===cur?' now':'') + '"><div class="ov-tm">' + m2 + '월' + (m2===cur?'<span class="ov-now">이번 달</span>':'') + '</div><ul>' + its2.map(rowHtml).join('') + '</ul></div>';
-      }
-      html += '</div>';
-    }
-    body.innerHTML = html;
-    document.getElementById('ov-cap').textContent = new Date().getFullYear() + '년 기준 · 토·일·공휴일이면 다음 영업일 기준으로 표시합니다.';
-  }
-  (function(){
-    var seg = document.getElementById('ov-seg'), sub = document.getElementById('ov-seg-type');
-    if(!seg) return;
-    seg.addEventListener('click', function(e){
-      var b = e.target.closest('.ov-seg-btn'); if(!b) return;
-      ovView = b.dataset.v;
-      seg.querySelectorAll('.ov-seg-btn').forEach(function(x){ var on = x===b; x.classList.toggle('on', on); x.setAttribute('aria-selected', String(on)); });
-      renderOverview();
-    });
-    sub.addEventListener('click', function(e){
-      var b = e.target.closest('.ov-seg-btn'); if(!b) return;
-      ovType = b.dataset.t;
-      sub.querySelectorAll('.ov-seg-btn').forEach(function(x){ var on = x===b; x.classList.toggle('on', on); x.setAttribute('aria-selected', String(on)); });
-      renderOverview();
-    });
-    renderOverview();
-  })();
-})();
-</script>
-
-<script>
-(function(){
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if(!btn) return;
@@ -415,6 +272,7 @@
   });
 })();
 </script>
+
 
 
 
