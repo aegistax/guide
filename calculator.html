@@ -298,6 +298,7 @@
         <a href="schedule.html">세무일정</a>
       </div>
     </div>
+    <a class="nav-group-btn nav-link" href="labor.html">노무 가이드</a>
     <div class="nav-group">
       <button type="button" class="nav-group-btn">유용한 도구</button>
       <div class="nav-dropdown">
@@ -326,6 +327,7 @@ if(hv&&hv.matches){
   b.addEventListener("click",function(e){e.stopImmediatePropagation();e.stopPropagation();if(cur!==i)openAt(i);},true);});
  bar.addEventListener("mouseenter",function(){clearTimeout(tm);});
  bar.addEventListener("mouseleave",function(){clearTimeout(tm);tm=setTimeout(close,160);});
+ bar.querySelectorAll(".mega-nav .nav-link").forEach(function(l){l.addEventListener("mouseenter",function(){clearTimeout(tm);tm=setTimeout(close,80);});});
  var cta=bar.querySelector(".tb-cta");if(cta)cta.addEventListener("mouseenter",function(){tm=setTimeout(close,80);});
 }
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
