@@ -9,25 +9,9 @@
   :root{
     --ink:#1c2438; --ink-soft:#4b5468; --ink-faint:#7b8496;
     --paper:#ffffff; --surface:#ffffff; --surface-2:#eef3f9; --line:#d8e2ee;
-    --accent:#2f6fb0; --accent-ink:#1f4d7d; --accent-soft:#e4edf8;
+    --accent:#0b5cff; --accent-ink:#1a3fa8; --accent-soft:#e8efff;
     --shadow: 0 1px 2px rgba(28,36,56,.06), 0 8px 24px rgba(28,36,56,.06);
     --footer-bg:#f1f1f3;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --ink:#e9ecf2; --ink-soft:#aab2c4; --ink-faint:#7c8398;
-      --paper:#11151d; --surface:#181e28; --surface-2:#1f2632; --line:#2b3342;
-      --accent:#5b9bd9; --accent-ink:#bfe0fb; --accent-soft:#1c3350;
-      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35);
-      --footer-bg:#1b1c1f;
-    }
-  }
-  :root[data-theme="dark"]{
-    --ink:#e9ecf2; --ink-soft:#aab2c4; --ink-faint:#7c8398;
-    --paper:#11151d; --surface:#181e28; --surface-2:#1f2632; --line:#2b3342;
-    --accent:#5b9bd9; --accent-ink:#bfe0fb; --accent-soft:#1c3350;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35);
-      --footer-bg:#1b1c1f;
   }
   *{box-sizing:border-box;}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:'Noto Sans KR',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
@@ -41,14 +25,8 @@
   .brand-logo-link{display:flex; align-items:center;}
   .brand-logo{height:22px; width:auto; display:block;}
   .brand-logo-dark{display:none;}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .brand-logo-light{display:none;}
-    :root:not([data-theme="light"]) .brand-logo-dark{display:block;}
-  }
-  :root[data-theme="dark"] .brand-logo-light{display:none;}
-  :root[data-theme="dark"] .brand-logo-dark{display:block;}
 
-  .back-link{font-size:13px; height:30px; box-sizing:border-box; padding:0 14px; border-radius:999px; border:1px solid transparent; color:#fff; text-decoration:none; white-space:nowrap; display:inline-flex; align-items:center; background:linear-gradient(135deg,#2f6fb0,#63a6e0); box-shadow:0 2px 8px rgba(47,111,176,.32); transition:filter .15s, transform .15s, box-shadow .15s;}
+  .back-link{font-size:13px; height:30px; box-sizing:border-box; padding:0 14px; border-radius:999px; border:1px solid transparent; color:#fff; text-decoration:none; white-space:nowrap; display:inline-flex; align-items:center; background:linear-gradient(135deg,#1c3180,#4a5bc9); box-shadow:0 2px 8px rgba(63,79,184,.35); transition:filter .15s, transform .15s, box-shadow .15s;}
   .back-link:hover{filter:brightness(1.08); transform:translateY(-1px); box-shadow:0 4px 12px rgba(47,111,176,.4);}
   .hero{padding:44px 0 30px; border-bottom:1px solid var(--line);}
   .nav-row{display:flex; align-items:center; gap:10px; max-width:920px; margin:0 auto; padding:0 24px 12px;}
@@ -129,7 +107,7 @@
 .topbar-inner .nav-group-btn::after{opacity:.55; margin-top:1px;}
 .topbar-inner .nav-dropdown{left:0; top:calc(100% + 2px);}
 .topbar-inner .topbar-actions{display:flex; align-items:center; gap:14px; margin-left:auto; flex:0 0 auto;}
-.topbar-inner .tb-cta{display:inline-flex; align-items:center; font-size:13px; font-weight:600; padding:8px 16px; border-radius:999px; background:var(--ink); color:var(--surface); text-decoration:none; white-space:nowrap; font-family:inherit; transition:opacity .15s;}
+.topbar-inner .tb-cta{display:inline-flex; align-items:center; font-size:13px; font-weight:600; padding:8px 16px; border-radius:14px; background:var(--ink); color:var(--surface); text-decoration:none; white-space:nowrap; font-family:inherit; transition:opacity .15s;}
 .topbar-inner .tb-cta:hover{opacity:.85;}
 .topbar-inner .theme-toggle{order:-1;}
 @media (max-width:640px){
@@ -155,8 +133,25 @@
 .tb-item b{display:block; font-size:14px; font-weight:600;}
 .tb-item span{display:block; margin-top:3px; font-size:12.5px; color:var(--ink-faint); line-height:1.45;}
 .topbar-inner .nav-group-btn[aria-expanded="true"]{background:var(--surface-2) !important;}
-.topbar-inner .nav-group-btn[aria-expanded="true"]::after{transform:rotate(180deg);}
+.topbar-inner .nav-group-btn::after{width:6px !important; height:6px !important; border:0 !important; border-right:1.6px solid currentColor !important; border-bottom:1.6px solid currentColor !important; border-radius:0 0 1px 0; transform:rotate(45deg); margin:-3px 0 0 3px !important; opacity:.8 !important; transition:transform .2s;}
+.topbar-inner .nav-group-btn[aria-expanded="true"]::after{transform:rotate(-135deg); margin-top:2px !important;}
 @media (max-width:640px){.tb-panel-inner{padding:4px 16px 18px; grid-template-columns:1fr;}}
+</style>
+<style id="tb3">
+.tb-burger{display:none;}
+@media (max-width:640px){
+  .topbar-inner{flex-wrap:wrap; gap:0 8px; align-items:center;}
+  .topbar-inner .topbar-actions{gap:6px;}
+  .topbar .tb-burger{display:inline-flex !important; flex-direction:column; align-items:center; justify-content:center; gap:5px; width:40px; height:40px; margin-right:-8px; padding:0; background:none; border:0; cursor:pointer; color:var(--ink); -webkit-tap-highlight-color:transparent;}
+  .tb-burger span{display:block; width:22px; height:2px; border-radius:2px; background:currentColor; transition:transform .22s ease, opacity .18s ease;}
+  .topbar.m-open .tb-burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .topbar.m-open .tb-burger span:nth-child(2){opacity:0;}
+  .topbar.m-open .tb-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .topbar-inner .mega-nav{display:none !important; order:3; flex:0 0 100%; flex-direction:column; align-items:stretch; gap:0; margin:6px 0 0; padding:0 0 8px;}
+  .topbar.m-open .topbar-inner .mega-nav{display:flex !important;}
+  .topbar-inner .mega-nav .nav-group-btn,.topbar-inner .mega-nav .nav-link{display:flex; align-items:center; justify-content:space-between; width:100%; box-sizing:border-box; padding:15px 4px; font-size:16px; border-radius:0 !important; border-top:1px solid color-mix(in srgb, currentColor 16%, transparent) !important; text-align:left;}
+  .topbar-inner .mega-nav .nav-group-btn:hover{background:none !important;}
+}
 </style>
 <div class="topbar">
   <div class="topbar-inner">
@@ -179,7 +174,8 @@
     </div>
   </nav>
     <div class="topbar-actions"><a class="tb-cta" href="consult.html">상담하기</a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="다크모드 전환"><svg class="tt-icon tt-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"/></svg><svg class="tt-icon tt-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.3 8.3 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z"/></svg></button></div>
+      <button type="button" class="tb-burger" id="tb-burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mega-nav"><span></span><span></span><span></span></button>
+      </div>
   </div>
   <div class="tb-dim" id="tb-dim"></div>
   <div class="tb-panel" id="tb-panel"><div class="tb-clip">
@@ -203,31 +199,36 @@ if(hv&&hv.matches){
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
 </div>
 
-<section class="hm">
-  <div class="wrap">
-    <h1 class="hm-title">대표님들이 가장 많이 찾는<br><span class="hm-grad">세무·노무 정보</span>를 한 곳에.</h1>
-    <div class="hm-grid">
-      <a class="hm-card hm-c-light" href="schedule.html">
-        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ff4f7b"/></linearGradient></defs><rect x="8" y="12" width="48" height="44" rx="10" fill="#fff"/><path d="M8 22a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v6H8z" fill="url(#hg2)"/><rect x="20" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><rect x="39" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><g fill="#d9dcea"><circle cx="20" cy="36" r="3"/><circle cx="29" cy="36" r="3"/><circle cx="38" cy="36" r="3"/><circle cx="47" cy="36" r="3"/><circle cx="20" cy="46" r="3"/><circle cx="29" cy="46" r="3"/><circle cx="47" cy="46" r="3"/></g><circle cx="38" cy="46" r="6" fill="#6a4cff"/><path d="M35 46l2.2 2.2L41.5 43.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h2>세무일정</h2>
-        <p>사업자에게 꼭 필요한<br>세무일정을 한눈에 확인</p>
-        <div class="hm-chips"><span>신고·납부 기한</span></div>
-      </a>
-      <a class="hm-card hm-c-purple" href="calculator.html">
-        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6bff"/><stop offset="1" stop-color="#4f8bff"/></linearGradient></defs><rect x="12" y="6" width="40" height="52" rx="9" fill="#fff"/><rect x="18" y="12" width="28" height="12" rx="4" fill="url(#hg1)"/><g fill="#d9dcea"><rect x="18" y="29" width="8" height="7" rx="2.5"/><rect x="28" y="29" width="8" height="7" rx="2.5"/><rect x="38" y="29" width="8" height="7" rx="2.5"/><rect x="18" y="39" width="8" height="7" rx="2.5"/><rect x="28" y="39" width="8" height="7" rx="2.5"/><rect x="18" y="49" width="8" height="4" rx="2"/><rect x="28" y="49" width="8" height="4" rx="2"/></g><rect x="38" y="39" width="8" height="14" rx="2.5" fill="#ff7a3d"/></svg></div>
-        <h2>세금·노무 간편 계산기</h2>
-        <p>복잡한 계산, 숫자만 넣으면 바로</p>
-        <div class="hm-chips"><span>4대보험료</span><span>원천징수</span><span>주휴수당</span><span>퇴직금</span></div>
-      </a>
-      <a class="hm-card hm-c-orange" href="consult.html">
-        <div class="hm-ic"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><path d="M14 10h36a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H30l-12 10v-10h-4a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8z" fill="#fff"/><circle cx="22" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="32" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="42" cy="29" r="3.4" fill="url(#hg3)"/></svg></div>
-        <h2>상담하기</h2>
-        <p>궁금한 점은<br>편하게 문의해 주세요</p>
-        <div class="hm-chips"><span>전화</span><span>카카오톡</span><span>방문</span><span>온라인 신청</span></div>
-      </a>
+<div class="zw">
+  <div class="zb" id="zb"><div class="zb-in">
+    <div class="zb-txt" id="zb-txt" aria-live="off">
+      <span class="zb-msg on" data-href="tax2027.html">2027년부터 새로 바뀌는 사업자 세금, 미리 확인하세요</span>
+      <span class="zb-msg" data-href="umbrella.html">자영업자의 퇴직금! 노란우산공제를 만나보세요</span>
+    </div>
+  </div></div>
+<section class="zh">
+  <div class="zh-in">
+    <h1>가장 많이 찾는<br>세무·노무 정보를 한곳에</h1>
+    <p>절세 가이드부터 간편 계산기, 세무 노무서식까지.<br>사업에 필요한 정보를 쉽고 빠르게 확인하세요.</p>
+    <div class="zh-btns">
+      <a class="zh-btn dark" href="labor.html">노무 가이드 살펴보기</a>
+      <a class="zh-btn light" href="consult.html">상담하기</a>
     </div>
   </div>
 </section>
+<section class="zs">
+  <div class="zs-view"><div class="zs-grid">
+      <a class="zs-card" href="schedule.html"><div class="zs-th zs-t1"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ff4f7b"/></linearGradient></defs><rect x="8" y="12" width="48" height="44" rx="10" fill="#fff"/><path d="M8 22a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v6H8z" fill="url(#hg2)"/><rect x="20" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><rect x="39" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><g fill="#d9dcea"><circle cx="20" cy="36" r="3"/><circle cx="29" cy="36" r="3"/><circle cx="38" cy="36" r="3"/><circle cx="47" cy="36" r="3"/><circle cx="20" cy="46" r="3"/><circle cx="29" cy="46" r="3"/><circle cx="47" cy="46" r="3"/></g><circle cx="38" cy="46" r="6" fill="#6a4cff"/><path d="M35 46l2.2 2.2L41.5 43.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2>세무일정</h2><p>신고·납부 기한을 달력으로 한눈에 확인하세요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" href="labor.html"><div class="zs-th zs-t2"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9ceff"/></linearGradient></defs><path d="M12 10h30a6 6 0 0 1 6 6v38H18a6 6 0 0 1-6-6z" fill="url(#hg4)"/><path d="M48 16v38h4V16z" fill="#c9ceff" opacity=".6"/><rect x="20" y="20" width="20" height="4" rx="2" fill="#3f4fb8" opacity=".9"/><rect x="20" y="29" width="20" height="4" rx="2" fill="#3f4fb8" opacity=".7"/><rect x="20" y="38" width="12" height="4" rx="2" fill="#3f4fb8" opacity=".55"/></svg></div><h2>노무 가이드</h2><p>채용부터 급여, 퇴사까지 사장님이 자주 묻는 15가지.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" href="calculator.html"><div class="zs-th zs-t3"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6bff"/><stop offset="1" stop-color="#4f8bff"/></linearGradient></defs><rect x="12" y="6" width="40" height="52" rx="9" fill="#fff"/><rect x="18" y="12" width="28" height="12" rx="4" fill="url(#hg1)"/><g fill="#d9dcea"><rect x="18" y="29" width="8" height="7" rx="2.5"/><rect x="28" y="29" width="8" height="7" rx="2.5"/><rect x="38" y="29" width="8" height="7" rx="2.5"/><rect x="18" y="39" width="8" height="7" rx="2.5"/><rect x="28" y="39" width="8" height="7" rx="2.5"/><rect x="18" y="49" width="8" height="4" rx="2"/><rect x="28" y="49" width="8" height="4" rx="2"/></g><rect x="38" y="39" width="8" height="14" rx="2.5" fill="#ff7a3d"/></svg></div><h2>간편 계산기</h2><p>4대보험료, 원천징수, 주휴수당, 퇴직금을 바로 계산해요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" href="consult.html"><div class="zs-th zs-t4"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><path d="M14 10h36a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H30l-12 10v-10h-4a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8z" fill="#fff"/><circle cx="22" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="32" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="42" cy="29" r="3.4" fill="url(#hg3)"/></svg></div><h2>상담하기</h2><p>궁금한 점은 전화, 카카오톡, 온라인으로 편하게 문의하세요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" aria-hidden="true" tabindex="-1" href="schedule.html"><div class="zs-th zs-t1"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ff4f7b"/></linearGradient></defs><rect x="8" y="12" width="48" height="44" rx="10" fill="#fff"/><path d="M8 22a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v6H8z" fill="url(#hg2)"/><rect x="20" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><rect x="39" y="6" width="5" height="12" rx="2.5" fill="#6b6f86"/><g fill="#d9dcea"><circle cx="20" cy="36" r="3"/><circle cx="29" cy="36" r="3"/><circle cx="38" cy="36" r="3"/><circle cx="47" cy="36" r="3"/><circle cx="20" cy="46" r="3"/><circle cx="29" cy="46" r="3"/><circle cx="47" cy="46" r="3"/></g><circle cx="38" cy="46" r="6" fill="#6a4cff"/><path d="M35 46l2.2 2.2L41.5 43.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2>세무일정</h2><p>신고·납부 기한을 달력으로 한눈에 확인하세요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" aria-hidden="true" tabindex="-1" href="labor.html"><div class="zs-th zs-t2"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9ceff"/></linearGradient></defs><path d="M12 10h30a6 6 0 0 1 6 6v38H18a6 6 0 0 1-6-6z" fill="url(#hg4)"/><path d="M48 16v38h4V16z" fill="#c9ceff" opacity=".6"/><rect x="20" y="20" width="20" height="4" rx="2" fill="#3f4fb8" opacity=".9"/><rect x="20" y="29" width="20" height="4" rx="2" fill="#3f4fb8" opacity=".7"/><rect x="20" y="38" width="12" height="4" rx="2" fill="#3f4fb8" opacity=".55"/></svg></div><h2>노무 가이드</h2><p>채용부터 급여, 퇴사까지 사장님이 자주 묻는 15가지.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" aria-hidden="true" tabindex="-1" href="calculator.html"><div class="zs-th zs-t3"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6bff"/><stop offset="1" stop-color="#4f8bff"/></linearGradient></defs><rect x="12" y="6" width="40" height="52" rx="9" fill="#fff"/><rect x="18" y="12" width="28" height="12" rx="4" fill="url(#hg1)"/><g fill="#d9dcea"><rect x="18" y="29" width="8" height="7" rx="2.5"/><rect x="28" y="29" width="8" height="7" rx="2.5"/><rect x="38" y="29" width="8" height="7" rx="2.5"/><rect x="18" y="39" width="8" height="7" rx="2.5"/><rect x="28" y="39" width="8" height="7" rx="2.5"/><rect x="18" y="49" width="8" height="4" rx="2"/><rect x="28" y="49" width="8" height="4" rx="2"/></g><rect x="38" y="39" width="8" height="14" rx="2.5" fill="#ff7a3d"/></svg></div><h2>간편 계산기</h2><p>4대보험료, 원천징수, 주휴수당, 퇴직금을 바로 계산해요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+      <a class="zs-card" aria-hidden="true" tabindex="-1" href="consult.html"><div class="zs-th zs-t4"><svg viewBox="0 0 64 64"><defs><linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><path d="M14 10h36a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H30l-12 10v-10h-4a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8z" fill="#fff"/><circle cx="22" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="32" cy="29" r="3.4" fill="url(#hg3)"/><circle cx="42" cy="29" r="3.4" fill="url(#hg3)"/></svg></div><h2>상담하기</h2><p>궁금한 점은 전화, 카카오톡, 온라인으로 편하게 문의하세요.</p><span class="zs-more">자세히 보기 ↗</span></a>
+  </div></div>
+</section>
+</div>
 
 <style>.ft-links{margin:8px 0 0; font-size:13px;} .ft-links a{color:var(--ink-faint); text-decoration:underline; text-underline-offset:3px;} .nav-link{text-decoration:none;} .nav-link::after{display:none;} .step-btn,.copy-btn,.calc-back,.form-dl-btn,.fm-pdf{border-radius:12px !important;} .seg{border-radius:12px !important;} .seg-btn{border-radius:8px !important;} footer{padding:28px 0 32px;} footer .office-box h3,footer .office-box .meta,footer .office-box .disclaimer{font-size:13px !important; font-weight:400 !important; color:var(--ink-faint) !important;} .office-box .meta{line-height:1.5; margin-top:6px;} .disclaimer{line-height:1.5; margin-top:10px; padding-top:10px; border-top:1px solid var(--line);}</style><footer>
   <div class="wrap">
@@ -247,32 +248,80 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
   </div>
 </footer>
 <style>
-.hm{padding:56px 0 64px;}
-.hm-title{text-align:center; font-size:clamp(26px,5.2vw,40px); font-weight:800; line-height:1.32; letter-spacing:-.02em; margin:0 0 40px; color:var(--ink);}
-.hm-grad{background:linear-gradient(90deg,#2a7bff,#8b5cf6 55%,#ec4899); -webkit-background-clip:text; background-clip:text; color:transparent;}
-.hm-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;}
-.hm-card{display:flex; flex-direction:column; align-items:center; text-align:center; text-decoration:none; padding:36px 20px 30px; border-radius:16px; min-height:340px; transition:transform .18s, box-shadow .18s;}
-.hm-card:hover{transform:translateY(-4px);}
-.hm-ic{width:84px; height:84px; margin-bottom:22px; filter:drop-shadow(0 6px 10px rgba(30,30,80,.22));}
-.hm-ic svg{width:100%; height:100%; display:block;}
-.hm-card h2{font-size:20px; font-weight:800; margin:0 0 8px; letter-spacing:-.01em;}
-.hm-card p{font-size:14px; line-height:1.6; margin:0 0 18px;}
-.hm-chips{display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:auto;}
-.hm-chips span{font-size:13px; font-weight:700; padding:7px 14px; border-radius:999px;}
-.hm-c-light{background:linear-gradient(160deg,var(--surface-2),var(--surface)); border:1px solid var(--line); color:var(--ink);}
-.hm-c-light p{color:var(--ink-soft);}
-.hm-c-light .hm-chips span{background:var(--surface); color:#5b3fe0; box-shadow:0 1px 4px rgba(40,40,100,.12);}
-.hm-c-light:hover{box-shadow:0 10px 24px rgba(40,40,100,.14);}
-.hm-c-purple{background:linear-gradient(160deg,#a78bfa,#7c5cff 55%,#5b3fe0); color:#fff;}
-.hm-c-purple p{color:rgba(255,255,255,.92);}
-.hm-c-purple .hm-chips span{background:rgba(255,255,255,.22); color:#fff;}
-.hm-c-purple:hover{box-shadow:0 12px 28px rgba(91,63,224,.38);}
-.hm-c-orange{background:linear-gradient(160deg,#ffd6b0,#ffab6b 55%,#ff8a4c); color:#3b2314;}
-.hm-c-orange p{color:rgba(59,35,20,.85);}
-.hm-c-orange .hm-chips span{background:rgba(255,255,255,.6); color:#9a3f10;}
-.hm-c-orange:hover{box-shadow:0 12px 28px rgba(255,138,76,.38);}
-@media (max-width:860px){ .hm-grid{grid-template-columns:1fr;} .hm-card{min-height:0; padding:28px 20px 24px;} .hm-ic{width:72px; height:72px; margin-bottom:16px;} .hm{padding:40px 0 48px;} }
-@media (prefers-reduced-motion:reduce){ .hm-card{transition:none;} .hm-card:hover{transform:none;} }
+.zh{position:relative; color:#fff; text-align:center; padding:88px 0 96px;}
+.zw{position:relative;}
+.zw::before{content:""; position:fixed; left:0; right:0; top:0; height:740px; background:radial-gradient(60% 50% at 88% 62%,rgba(200,172,255,.55),transparent 70%),radial-gradient(55% 48% at 8% 56%,rgba(86,140,255,.45),transparent 70%),linear-gradient(180deg,#040929 0%,#0c1766 28%,#2f3fc0 50%,#7a72e0 66%,#c4b8f4 82%,var(--paper) 100%); background-repeat:no-repeat; z-index:-1; pointer-events:none;}
+@keyframes zhFlow{0%,100%{background-position:50% 0%;}50%{background-position:50% 100%;}}
+.zh-in{max-width:880px; margin:0 auto; padding:0 24px;}
+.zh h1{color:#fff !important; font-size:clamp(26px,5.4vw,50px); font-weight:600; line-height:1.22; letter-spacing:-.03em; margin:0 0 26px; word-break:keep-all;}
+.zh p{font-size:clamp(15px,2.2vw,18px); line-height:1.75; margin:0 auto 38px; max-width:640px; color:rgba(255,255,255,.88); word-break:keep-all;}
+.zh-btns{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+.zh-btn{display:inline-flex; align-items:center; justify-content:center; height:44px; padding:0 20px; border-radius:14px; font-size:14px; font-weight:700; text-decoration:none; transition:transform .15s, box-shadow .15s, background .15s;}
+.zh-btn.dark{background:#02063d !important; color:#fff !important; border:1px solid rgba(255,255,255,.14);}
+.zh-btn.dark:hover{background:#0a1055; transform:translateY(-1px); box-shadow:0 8px 20px rgba(2,6,61,.4);}
+.zh-btn.light{background:#f2f5ff !important; color:#02063d !important; opacity:1 !important;}
+.zh-btn.light:hover{background:#fff; transform:translateY(-1px); box-shadow:0 8px 20px rgba(255,255,255,.25);}
+.zs{margin:0; padding:0 0 40px; position:relative; background:linear-gradient(180deg,transparent 0,transparent 40px,var(--paper) 210px);}
+.zs-view{position:relative; z-index:1;}
+.zs{overflow:hidden;}
+.zs-view{overflow:hidden; padding:6px 0 90px;}
+.zs-grid{display:flex; gap:18px; width:max-content; animation:zsSlide 36s linear infinite;}
+.zs-view:hover .zs-grid,.zs-view:focus-within .zs-grid{animation-play-state:paused;}
+@keyframes zsSlide{to{transform:translateX(calc(-50% - 9px));}}
+.zs-card{flex:0 0 272px;}
+.zs-card{display:flex; flex-direction:column; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:14px 14px 22px; box-shadow:0 12px 32px rgba(15,31,92,.12); transition:transform .18s, box-shadow .18s; color:inherit;}
+.zs-card:hover{transform:translateY(-5px); box-shadow:0 18px 40px rgba(15,31,92,.2);}
+.zs-th{border-radius:14px; aspect-ratio:16/11; display:flex; align-items:center; justify-content:center;}
+.zs-th svg{width:76px; height:76px; filter:drop-shadow(0 6px 10px rgba(30,30,80,.2));}
+.zs-t1{background:linear-gradient(160deg,#ffe3cf,#ffc9a0);} .zs-t2{background:linear-gradient(160deg,#e3e5ff,#c9ccf5);} .zs-t3{background:linear-gradient(160deg,#e6dcff,#cbb8ff);} .zs-t4{background:linear-gradient(160deg,#ffefc9,#ffd68f);}
+.zs-card h2{word-break:keep-all; font-size:18px; font-weight:800; margin:18px 8px 8px; letter-spacing:-.01em; color:var(--ink);}
+.zs-card p{word-break:keep-all; font-size:14px; line-height:1.65; margin:0 8px 16px; color:var(--ink-soft);}
+.zs-more{margin:auto 8px 0; font-size:14px; font-weight:700; color:var(--accent);}
+
+.zs-card{border:0 !important; color:#fff; box-shadow:0 16px 36px rgba(15,31,92,.28);}
+.zs-card:nth-child(4n+1){background:linear-gradient(165deg,#1a2f9e,#2f6bff);}
+.zs-card:nth-child(4n+2){background:linear-gradient(165deg,#0b1550,#2a3fc0);}
+.zs-card:nth-child(4n+3){background:linear-gradient(165deg,#3b2bb8,#8b5cf6);}
+.zs-card:nth-child(4n+4){background:linear-gradient(165deg,#0f2a6b,#3a8fe0);}
+.zs-card:hover{box-shadow:0 22px 44px rgba(15,31,92,.4);}
+.zs-th{background:rgba(255,255,255,.14) !important; border:1px solid rgba(255,255,255,.22);}
+.zs-card h2{color:#fff !important;} .zs-card p{color:rgba(255,255,255,.86) !important;} .zs-more{color:#fff !important;}
+@media (max-width:560px){ .zh{padding:56px 0 64px;} .zs-card{flex-basis:236px;} .zs-grid{gap:14px; animation-duration:30s;} .zs-th svg{width:64px; height:64px;} }
+@media (prefers-reduced-motion:reduce){ .zs-grid{animation:none;} .zs-view{overflow-x:auto; -webkit-mask-image:none; mask-image:none;} .zh{animation:none;} .zs-card,.zh-btn{transition:none;} .zs-card:hover{transform:none;} }
+
+.topbar{background-color:#040929 !important; background-image:radial-gradient(60% 50% at 88% 62%,rgba(200,172,255,.55),transparent 70%),radial-gradient(55% 48% at 8% 56%,rgba(86,140,255,.45),transparent 70%),linear-gradient(180deg,#040929 0%,#0c1766 28%,#2f3fc0 50%,#7a72e0 66%,#c4b8f4 82%,var(--paper) 100%) !important; background-attachment:fixed !important; background-size:100% 740px !important; background-repeat:no-repeat !important; backdrop-filter:none !important; border-bottom:0 !important;}
+.topbar .brand-logo{display:none !important;} .topbar .brand-logo-dark{display:block !important;}
+.topbar-inner .nav-group-btn,.topbar-inner .nav-link{color:#fff !important;}
+.topbar-inner .nav-group-btn:hover,.topbar-inner .nav-group:hover .nav-group-btn,.topbar-inner .nav-group.force-open .nav-group-btn,.topbar-inner .nav-link:hover{background:rgba(255,255,255,.14) !important; color:#fff !important;}
+.topbar .theme-toggle{color:rgba(255,255,255,.85) !important;} .topbar .theme-toggle:hover{color:#fff !important;}
+.topbar{transition:background-color .2s ease, box-shadow .2s ease;}
+.topbar.is-scrolled{background-color:#fff !important; background-image:none !important; border-bottom:1px solid var(--line) !important; box-shadow:0 2px 14px rgba(15,31,92,.08);}
+.topbar.is-scrolled .brand-logo-light{display:block !important;} .topbar.is-scrolled .brand-logo-dark{display:none !important;}
+.topbar.is-scrolled .topbar-inner .nav-group-btn,.topbar.is-scrolled .topbar-inner .nav-link{color:var(--ink) !important;}
+.topbar.is-scrolled .topbar-inner .nav-group-btn:hover,.topbar.is-scrolled .topbar-inner .nav-group:hover .nav-group-btn,.topbar.is-scrolled .topbar-inner .nav-group.force-open .nav-group-btn,.topbar.is-scrolled .topbar-inner .nav-link:hover{background:#eef3ff !important; color:var(--ink) !important;}
+.topbar.is-scrolled .tb-cta{background:#1e2a44 !important; color:#fff !important;}
+.topbar.is-scrolled .tb-cta:hover{background:#2c3a5e !important;}
+.topbar .topbar-inner{padding-top:26px !important; padding-bottom:14px !important;}
+@media (max-width:860px){.topbar .topbar-inner{padding-top:20px !important; padding-bottom:8px !important;}}
+.topbar.is-scrolled .topbar-inner{padding-top:12px !important; padding-bottom:12px !important; transition:padding .2s;}
+@media (max-width:860px){.topbar.is-scrolled .topbar-inner{padding-top:10px !important; padding-bottom:10px !important;}}
+.topbar .tb-cta{background:#fff !important; color:#02063d !important; border-radius:14px !important;}
+.topbar .tb-cta:hover{background:#e8efff !important;}
+.topbar .tb-burger{color:#fff !important;} .topbar.is-scrolled .tb-burger{color:var(--ink) !important;}
+.zb{position:relative; max-width:1040px; margin:18px auto 0; padding:0 16px;}
+.zb-in{display:flex; align-items:center; justify-content:center; gap:16px; min-height:44px; padding:8px 20px; border-radius:14px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.16); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); position:relative;}
+.zb-txt{position:relative; height:24px; flex:1 1 auto; overflow:hidden; text-align:center;}
+.zb-msg{text-align:center; position:absolute; left:0; right:0; top:0; line-height:24px; font-size:15px; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:0; transform:translateY(100%); transition:opacity .45s, transform .45s;}
+.zb-msg.on{opacity:1; transform:none;} .zb-msg.out{opacity:0; transform:translateY(-100%);}
+.zb-go{flex:0 0 auto; display:inline-flex; align-items:center; height:38px; padding:0 18px; border-radius:14px; background:linear-gradient(90deg,#2f6bff,#d63a96); color:#fff; font-size:14px; font-weight:700; text-decoration:none; white-space:nowrap;}
+.zb-go:hover{filter:brightness(1.08);}
+.zb-x{position:absolute; right:14px; top:50%; transform:translateY(-50%); width:32px; height:32px; border:0; background:transparent; color:rgba(255,255,255,.8); cursor:pointer; border-radius:8px; display:flex; align-items:center; justify-content:center;}
+.zb-x:hover{background:rgba(255,255,255,.14); color:#fff;}
+.zb[hidden]{display:none;}
+.zb + .zh{padding-top:32px;}
+@media (max-width:640px){ .zb{margin-top:14px;} .zb-in{padding:10px 14px; min-height:42px; justify-content:center;} .zb-txt{text-align:center; width:100%; max-width:none; height:22px; flex:0 0 auto;} .zb-msg{font-size:13px; line-height:22px; white-space:nowrap; text-align:center; top:0;}
+@media (max-width:360px){ .zb-msg{font-size:12px;} } .zb-go{height:34px; padding:0 13px; font-size:13px;} .zb-x{right:8px;} .zb + .zh{padding-top:24px;} }
+@media (prefers-reduced-motion:reduce){ .zb-msg{transition:none;} }
 </style>
 
 <script>
@@ -303,36 +352,11 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 })();
 </script>
 
-<script>
-(function(){
-  var root = document.documentElement;
-  var btn = document.getElementById('theme-toggle');
-  if(!btn) return;
-  function isDarkActive(){
-    var attr = root.getAttribute('data-theme');
-    if(attr === 'dark') return true;
-    if(attr === 'light') return false;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-  function refreshIcon(){
-    var dark = isDarkActive();
-    btn.setAttribute('data-mode', dark ? 'dark' : 'light');
-  }
-  var saved = localStorage.getItem('aegis-theme');
-  if(saved === 'dark' || saved === 'light'){
-    root.setAttribute('data-theme', saved);
-  }
-  refreshIcon();
-  btn.addEventListener('click', function(){
-    var next = isDarkActive() ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('aegis-theme', next);
-    refreshIcon();
-  });
-})();
-</script>
-
-
-
-
+<script>(function(){var b=document.querySelector(".topbar");if(!b)return;function f(){b.classList.toggle("is-scrolled",window.scrollY>12);}window.addEventListener("scroll",f,{passive:true});f();})();</script>
+<script>(function(){var z=document.getElementById("zb");if(!z)return;var m=z.querySelectorAll(".zb-msg"),i=0,t=null,hov=false;function show(n){var o=m[i];o.classList.remove("on");o.classList.add("out");setTimeout(function(){o.classList.remove("out");},460);i=n;m[i].classList.add("on");}function tick(){if(hov)return;show((i+1)%m.length);}if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches)t=setInterval(tick,3000);z.style.cursor="pointer";z.addEventListener("click",function(){location.href=m[i].getAttribute("data-href");});z.addEventListener("mouseenter",function(){hov=true;});z.addEventListener("mouseleave",function(){hov=false;});})();</script><script>(function(){var bar=document.querySelector(".topbar"),b=document.getElementById("tb-burger");if(!bar||!b)return;
+function set(o){bar.classList.toggle("m-open",o);b.setAttribute("aria-expanded",o?"true":"false");b.setAttribute("aria-label",o?"메뉴 닫기":"메뉴 열기");if(!o)bar.classList.remove("tb-open");}
+b.addEventListener("click",function(e){e.stopPropagation();set(!bar.classList.contains("m-open"));});
+document.addEventListener("click",function(e){if(!bar.contains(e.target))set(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
+window.addEventListener("resize",function(){if(window.innerWidth>640)set(false);});})();</script>
 </body></html>
