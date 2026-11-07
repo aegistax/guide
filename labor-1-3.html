@@ -15,6 +15,17 @@
 .lb-tool span:not(.lt-eb){display:block !important; flex:none !important; order:0 !important; margin:6px 0 0 !important; font-size:14px !important; color:var(--ink-soft) !important; line-height:1.6;}
 .lb-tool em{flex:0 0 auto !important; margin:0 !important; font-style:normal; font-size:22px !important; line-height:1; color:#4a5bc9 !important;}
 @media (max-width:640px){.lb-tool{padding:16px 18px !important;} .lb-tool b{font-size:16px !important;}}
+</style><style id="tb4">
+@media (max-width:640px){
+  .tb-panel,.tb-dim{display:none !important;}
+  .topbar-inner .mega-nav .nav-group{display:block; width:100%;}
+  .topbar-inner .nav-group .nav-dropdown{display:none !important;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown{display:block !important; position:static !important; left:auto !important; top:auto !important; min-width:0; width:auto; margin:0; padding:0 0 10px !important; background:none; border:0; box-shadow:none; opacity:1; visibility:visible; transform:none;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a{display:block; padding:12px 14px; font-size:15px; font-weight:500; color:var(--ink-soft); text-decoration:none; border-radius:10px;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a:active,.topbar-inner .nav-group.m-exp .nav-dropdown a:hover{background:var(--surface-2); color:var(--ink);}
+  .topbar-inner .nav-group.m-exp .nav-group-btn::after{transform:rotate(-135deg); margin-top:2px !important;}
+  .topbar-inner .nav-group.m-exp .nav-group-btn{background:none !important;}
+}
 </style></head><body>
 
 
@@ -388,7 +399,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 .cl-rel small{display:block; font-size:12px; color:var(--ink-faint); margin-bottom:3px;}
 .cl-rel b{display:block; font-size:14px; line-height:1.55; color:var(--ink); font-weight:600;}
 .cl-rel a:hover b{color:var(--accent-ink);}
-.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 8px; background:var(--surface);}
+.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 24px; background:var(--surface);}
 .cl-toc-m summary{cursor:pointer; list-style:none; font-size:14px; font-weight:700; padding:14px 16px;}
 .cl-toc-m summary::-webkit-details-marker{display:none;}
 .cl-toc-m summary::after{content:"+"; float:right; color:var(--ink-faint);}
@@ -529,7 +540,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <h2 id="s4">근무시간과 야간·휴일 근무 규정은요?</h2><p>법정 근로시간은 <b>하루 7시간, 주 35시간</b>을 초과할 수 없고, 연장근로는 합의 시 하루 1시간·주 5시간 한도입니다. 밤 10시~아침 6시 야간 근로 및 휴일 근로는 원칙적으로 금지되며, 근로자 동의와 관할 고용노동관서장의 인가가 있을 때만 예외가 인정됩니다.</p>
 <h2 id="s5">최저임금이나 주휴수당을 적게 줘도 되나요?</h2><p>아니요, 미성년자라는 이유로 차등 지급할 수 없습니다. 성인과 동일한 최저임금(2026년 기준 시급 10,320원)이 적용되고, 요건을 충족하면 주휴수당도 동일하게 지급해야 합니다.</p>
 <h2 id="s6">채용이 금지되는 업종이 있나요?</h2><p>청소년 유해업소(유흥·단란주점, 비디오방, 청소년 출입금지 노래연습장, 안마시술소, 사행행위 영업장 등)에는 채용이 전면 금지됩니다. 위반 시 3년 이하 징역 또는 3천만 원 이하 벌금이 부과될 수 있습니다.</p>
-<h2 id="s7">바로 쓰는 서식</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="forms.html"><div class="lt-tx"><small class="lt-eb">바로 쓰는 서식</small><b><i>📄</i>친권자(후견인) 동의서</b><span>미성년 근로자 채용 전 필수 수령 — 서식 모음에서 내려받기</span></div><em aria-label="바로 가기">↗</em></a></div></div>
+<h2 id="s7">바로 쓰는 서식</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="forms.html"><div class="lt-tx"><small class="lt-eb">바로 쓰는 서식</small><b>친권자(후견인) 동의서</b><span>미성년 근로자 채용 전 필수 수령 — 서식 모음에서 내려받기</span></div><em aria-label="바로 가기">↗</em></a></div></div>
         </div>
         <div class="cl-foot">
           <div class="cl-pn" hidden><a class="pv" href="labor-1-2.html"><small>← 이전 글</small><b>4대보험·3.3%·일용직, 신고 유형부터 정확히 골라야 합니다</b></a><a class="nx" href="labor-1-4.html"><small>다음 글 →</small><b>외국인근로자 채용 가이드</b></a></div>
@@ -602,4 +613,9 @@ b.addEventListener("click",function(e){e.stopPropagation();set(!bar.classList.co
 document.addEventListener("click",function(e){if(!bar.contains(e.target))set(false);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 window.addEventListener("resize",function(){if(window.innerWidth>640)set(false);});})();</script>
-</body></html>
+<script>(function(){var nav=document.getElementById("mega-nav"),bar=document.querySelector(".topbar"),bg=document.getElementById("tb-burger");if(!nav||!bar)return;
+function mob(){return window.innerWidth<=640;}
+nav.addEventListener("click",function(e){var b=e.target.closest(".nav-group-btn");if(!b||!mob())return;var g=b.closest(".nav-group");if(!g)return;e.stopPropagation();e.preventDefault();var open=g.classList.contains("m-exp");nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});if(!open)g.classList.add("m-exp");},true);
+function reset(){nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});}
+if(bg)bg.addEventListener("click",function(){setTimeout(function(){if(!bar.classList.contains("m-open"))reset();},0);});
+window.addEventListener("resize",function(){if(!mob())reset();});})();</script></body></html>

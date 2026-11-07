@@ -15,6 +15,17 @@
 .lb-tool span:not(.lt-eb){display:block !important; flex:none !important; order:0 !important; margin:6px 0 0 !important; font-size:14px !important; color:var(--ink-soft) !important; line-height:1.6;}
 .lb-tool em{flex:0 0 auto !important; margin:0 !important; font-style:normal; font-size:22px !important; line-height:1; color:#4a5bc9 !important;}
 @media (max-width:640px){.lb-tool{padding:16px 18px !important;} .lb-tool b{font-size:16px !important;}}
+</style><style id="tb4">
+@media (max-width:640px){
+  .tb-panel,.tb-dim{display:none !important;}
+  .topbar-inner .mega-nav .nav-group{display:block; width:100%;}
+  .topbar-inner .nav-group .nav-dropdown{display:none !important;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown{display:block !important; position:static !important; left:auto !important; top:auto !important; min-width:0; width:auto; margin:0; padding:0 0 10px !important; background:none; border:0; box-shadow:none; opacity:1; visibility:visible; transform:none;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a{display:block; padding:12px 14px; font-size:15px; font-weight:500; color:var(--ink-soft); text-decoration:none; border-radius:10px;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a:active,.topbar-inner .nav-group.m-exp .nav-dropdown a:hover{background:var(--surface-2); color:var(--ink);}
+  .topbar-inner .nav-group.m-exp .nav-group-btn::after{transform:rotate(-135deg); margin-top:2px !important;}
+  .topbar-inner .nav-group.m-exp .nav-group-btn{background:none !important;}
+}
 </style></head><body>
 
 
@@ -388,7 +399,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 .cl-rel small{display:block; font-size:12px; color:var(--ink-faint); margin-bottom:3px;}
 .cl-rel b{display:block; font-size:14px; line-height:1.55; color:var(--ink); font-weight:600;}
 .cl-rel a:hover b{color:var(--accent-ink);}
-.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 8px; background:var(--surface);}
+.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 24px; background:var(--surface);}
 .cl-toc-m summary{cursor:pointer; list-style:none; font-size:14px; font-weight:700; padding:14px 16px;}
 .cl-toc-m summary::-webkit-details-marker{display:none;}
 .cl-toc-m summary::after{content:"+"; float:right; color:var(--ink-faint);}
@@ -530,7 +541,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <h2 id="s5">사직 사유는 어떻게 적어야 하나요?</h2><p>실제 경위대로 적어야 합니다. 권고사직을 “개인 사정”으로 적게 하면 <b>실업급여 수급 자격</b>과 얽혀 분쟁이 됩니다.</p>
 <h2 id="s6">부당해고 구제신청은 아무 때나 할 수 있나요?</h2><p>해고일로부터 <b>3개월 이내</b>에 해야 하며(근로기준법 제28조), <b>상시 5인 이상 사업장</b>에만 적용됩니다. 5인 미만은 민사소송으로 다툴 수 있습니다.</p>
 <h2 id="s7">해고 대신 권고사직으로 처리하면 무조건 유리한가요?</h2><p><b>고용장려금</b>(청년일자리도약장려금 등)을 받는 중이라면 권고사직이 ‘인위적 감원’으로 보여 지원금 제한·환수가 될 수 있으니 먼저 확인하세요.</p>
-<h2 id="s8">바로 쓰는 서식</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="forms.html"><div class="lt-tx"><small class="lt-eb">바로 쓰는 서식</small><b><i>📄</i>사직서</b><span>퇴사 처리 시 (자필 서명 필수) — 서식 모음에서 내려받기</span></div><em aria-label="바로 가기">↗</em></a></div></div>
+<h2 id="s8">바로 쓰는 서식</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="forms.html"><div class="lt-tx"><small class="lt-eb">바로 쓰는 서식</small><b>사직서</b><span>퇴사 처리 시 (자필 서명 필수) — 서식 모음에서 내려받기</span></div><em aria-label="바로 가기">↗</em></a></div></div>
         </div>
         <div class="cl-foot">
           <div class="cl-pn" hidden><a class="pv" href="labor-3-2.html"><small>← 이전 글</small><b>퇴직금 지급의무와 계산법</b></a><a class="nx ph" href="labor.html"><small>&nbsp;</small><b>&nbsp;</b></a></div>
@@ -603,4 +614,9 @@ b.addEventListener("click",function(e){e.stopPropagation();set(!bar.classList.co
 document.addEventListener("click",function(e){if(!bar.contains(e.target))set(false);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 window.addEventListener("resize",function(){if(window.innerWidth>640)set(false);});})();</script>
-</body></html>
+<script>(function(){var nav=document.getElementById("mega-nav"),bar=document.querySelector(".topbar"),bg=document.getElementById("tb-burger");if(!nav||!bar)return;
+function mob(){return window.innerWidth<=640;}
+nav.addEventListener("click",function(e){var b=e.target.closest(".nav-group-btn");if(!b||!mob())return;var g=b.closest(".nav-group");if(!g)return;e.stopPropagation();e.preventDefault();var open=g.classList.contains("m-exp");nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});if(!open)g.classList.add("m-exp");},true);
+function reset(){nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});}
+if(bg)bg.addEventListener("click",function(){setTimeout(function(){if(!bar.classList.contains("m-open"))reset();},0);});
+window.addEventListener("resize",function(){if(!mob())reset();});})();</script></body></html>

@@ -15,6 +15,17 @@
 .lb-tool span:not(.lt-eb){display:block !important; flex:none !important; order:0 !important; margin:6px 0 0 !important; font-size:14px !important; color:var(--ink-soft) !important; line-height:1.6;}
 .lb-tool em{flex:0 0 auto !important; margin:0 !important; font-style:normal; font-size:22px !important; line-height:1; color:#4a5bc9 !important;}
 @media (max-width:640px){.lb-tool{padding:16px 18px !important;} .lb-tool b{font-size:16px !important;}}
+</style><style id="tb4">
+@media (max-width:640px){
+  .tb-panel,.tb-dim{display:none !important;}
+  .topbar-inner .mega-nav .nav-group{display:block; width:100%;}
+  .topbar-inner .nav-group .nav-dropdown{display:none !important;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown{display:block !important; position:static !important; left:auto !important; top:auto !important; min-width:0; width:auto; margin:0; padding:0 0 10px !important; background:none; border:0; box-shadow:none; opacity:1; visibility:visible; transform:none;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a{display:block; padding:12px 14px; font-size:15px; font-weight:500; color:var(--ink-soft); text-decoration:none; border-radius:10px;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a:active,.topbar-inner .nav-group.m-exp .nav-dropdown a:hover{background:var(--surface-2); color:var(--ink);}
+  .topbar-inner .nav-group.m-exp .nav-group-btn::after{transform:rotate(-135deg); margin-top:2px !important;}
+  .topbar-inner .nav-group.m-exp .nav-group-btn{background:none !important;}
+}
 </style></head><body>
 
 
@@ -388,7 +399,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 .cl-rel small{display:block; font-size:12px; color:var(--ink-faint); margin-bottom:3px;}
 .cl-rel b{display:block; font-size:14px; line-height:1.55; color:var(--ink); font-weight:600;}
 .cl-rel a:hover b{color:var(--accent-ink);}
-.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 8px; background:var(--surface);}
+.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 24px; background:var(--surface);}
 .cl-toc-m summary{cursor:pointer; list-style:none; font-size:14px; font-weight:700; padding:14px 16px;}
 .cl-toc-m summary::-webkit-details-marker{display:none;}
 .cl-toc-m summary::after{content:"+"; float:right; color:var(--ink-faint);}
@@ -528,7 +539,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <h2 id="s3">기한을 넘기면 어떻게 되나요?</h2><p>퇴직일로부터 14일을 넘기면 임금체불에 해당하며, 미지급액에 대해 <b>연 20%의 지연이자</b>가 발생하고 3년 이하 징역 또는 3천만 원 이하 벌금에 처해질 수 있습니다.</p>
 <h2 id="s4">매월 급여에 포함해서 주거나 수당으로 대체할 수 있나요?</h2><p>아니요, 법적으로 전면 무효입니다. 근로계약서에 명시했더라도 효력이 없으며, 근로자가 퇴직금을 재청구하면 다시 지급해야 합니다.</p>
 <h2 id="s5">퇴직금은 어느 계좌로 지급하나요?</h2><p>2022년 4월 법 개정 이후, 퇴직금이 300만 원을 초과하고 근로자가 55세 미만이면 원칙적으로 근로자 명의 <b>IRP(개인형 퇴직연금) 계좌</b>로 이전해야 합니다. 300만 원 이하이거나 55세 이상 등 예외적 사유에서만 일반 계좌 입금이 허용됩니다. 다만 IRP로 이전하지 않고 일반 계좌로 지급한 것 자체에 대한 별도의 벌칙 규정은 없어, 실무에서는 근로자가 원하는 경우 일반 계좌로 지급하는 사례도 있습니다. 그래도 법상 원칙은 IRP 이전이므로, 가능하면 원칙대로 처리하시길 권장합니다.</p>
-<h2 id="s6">바로 쓰는 계산기</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="calculator.html#severance"><div class="lt-tx"><small class="lt-eb">함께 쓰면 좋은 도구</small><b><i>🧮</i>퇴직금 계산기</b><span>재직기간과 임금으로 퇴직금 확인</span></div><em aria-label="바로 가기">↗</em></a></div></div>
+<h2 id="s6">바로 쓰는 계산기</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="calculator.html#severance"><div class="lt-tx"><small class="lt-eb">함께 쓰면 좋은 도구</small><b>퇴직금 계산기</b><span>재직기간과 임금으로 퇴직금 확인</span></div><em aria-label="바로 가기">↗</em></a></div></div>
         </div>
         <div class="cl-foot">
           <div class="cl-pn" hidden><a class="pv" href="labor-3-1.html"><small>← 이전 글</small><b>당일 해고, 해고예고수당부터 챙기세요</b></a><a class="nx" href="labor-3-3.html"><small>다음 글 →</small><b>사직서, 왜 반드시 받아둬야 할까요</b></a></div>
@@ -601,4 +612,9 @@ b.addEventListener("click",function(e){e.stopPropagation();set(!bar.classList.co
 document.addEventListener("click",function(e){if(!bar.contains(e.target))set(false);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 window.addEventListener("resize",function(){if(window.innerWidth>640)set(false);});})();</script>
-</body></html>
+<script>(function(){var nav=document.getElementById("mega-nav"),bar=document.querySelector(".topbar"),bg=document.getElementById("tb-burger");if(!nav||!bar)return;
+function mob(){return window.innerWidth<=640;}
+nav.addEventListener("click",function(e){var b=e.target.closest(".nav-group-btn");if(!b||!mob())return;var g=b.closest(".nav-group");if(!g)return;e.stopPropagation();e.preventDefault();var open=g.classList.contains("m-exp");nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});if(!open)g.classList.add("m-exp");},true);
+function reset(){nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});}
+if(bg)bg.addEventListener("click",function(){setTimeout(function(){if(!bar.classList.contains("m-open"))reset();},0);});
+window.addEventListener("resize",function(){if(!mob())reset();});})();</script></body></html>

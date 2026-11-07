@@ -15,6 +15,17 @@
 .lb-tool span:not(.lt-eb){display:block !important; flex:none !important; order:0 !important; margin:6px 0 0 !important; font-size:14px !important; color:var(--ink-soft) !important; line-height:1.6;}
 .lb-tool em{flex:0 0 auto !important; margin:0 !important; font-style:normal; font-size:22px !important; line-height:1; color:#4a5bc9 !important;}
 @media (max-width:640px){.lb-tool{padding:16px 18px !important;} .lb-tool b{font-size:16px !important;}}
+</style><style id="tb4">
+@media (max-width:640px){
+  .tb-panel,.tb-dim{display:none !important;}
+  .topbar-inner .mega-nav .nav-group{display:block; width:100%;}
+  .topbar-inner .nav-group .nav-dropdown{display:none !important;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown{display:block !important; position:static !important; left:auto !important; top:auto !important; min-width:0; width:auto; margin:0; padding:0 0 10px !important; background:none; border:0; box-shadow:none; opacity:1; visibility:visible; transform:none;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a{display:block; padding:12px 14px; font-size:15px; font-weight:500; color:var(--ink-soft); text-decoration:none; border-radius:10px;}
+  .topbar-inner .nav-group.m-exp .nav-dropdown a:active,.topbar-inner .nav-group.m-exp .nav-dropdown a:hover{background:var(--surface-2); color:var(--ink);}
+  .topbar-inner .nav-group.m-exp .nav-group-btn::after{transform:rotate(-135deg); margin-top:2px !important;}
+  .topbar-inner .nav-group.m-exp .nav-group-btn{background:none !important;}
+}
 </style></head><body>
 
 
@@ -388,7 +399,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 .cl-rel small{display:block; font-size:12px; color:var(--ink-faint); margin-bottom:3px;}
 .cl-rel b{display:block; font-size:14px; line-height:1.55; color:var(--ink); font-weight:600;}
 .cl-rel a:hover b{color:var(--accent-ink);}
-.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 8px; background:var(--surface);}
+.cl-toc-m{display:none; border:1px solid var(--line); border-radius:12px; margin:0 0 24px; background:var(--surface);}
 .cl-toc-m summary{cursor:pointer; list-style:none; font-size:14px; font-weight:700; padding:14px 16px;}
 .cl-toc-m summary::-webkit-details-marker{display:none;}
 .cl-toc-m summary::after{content:"+"; float:right; color:var(--ink-faint);}
@@ -528,7 +539,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <h2 id="s2">국민연금 산정 시 상한·하한액은요?</h2><p>기준소득월액 기준으로 <b>상한 659만 원, 하한 41만 원</b> 범위 내에서만 부과됩니다. 상한 초과 시에도 659만 원 기준 보험료(총 626,050원, 각 313,025원)만 납부합니다.</p>
 <h2 id="s3">장기요양보험료는 어떻게 계산되나요?</h2><p>보수월액 × 0.9448% 또는 건강보험료 × 약 13.14%, 두 방식의 결과는 동일하며 건강보험료와 별도로 합산 표시됩니다.</p>
 <h2 id="s4">급여에서 어떤 금액을 기준으로 차감하나요?</h2><p>식대(월 20만 원 이하) 등 비과세 항목을 제외한 <b>보수월액(과세대상 월 소득)</b>을 기준으로 원천징수합니다. 자세한 비과세 항목은 <a href="labor-2-4.html">4대보험 부담, 합법적으로 줄이는 법</a>을 참고하세요.</p>
-<h2 id="s5">바로 쓰는 계산기</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="calculator.html#insurance"><div class="lt-tx"><small class="lt-eb">함께 쓰면 좋은 도구</small><b><i>🧮</i>4대보험료 계산기</b><span>월 급여로 근로자·사업주 부담액 확인</span></div><em aria-label="바로 가기">↗</em></a></div></div>
+<h2 id="s5">바로 쓰는 계산기</h2><div class="lb-tools" style="margin-top:0"><div class="lb-tool-grid"><a class="lb-tool" href="calculator.html#insurance"><div class="lt-tx"><small class="lt-eb">함께 쓰면 좋은 도구</small><b>4대보험료 계산기</b><span>월 급여로 근로자·사업주 부담액 확인</span></div><em aria-label="바로 가기">↗</em></a></div></div>
         </div>
         <div class="cl-foot">
           <div class="cl-pn" hidden><a class="pv" href="labor-2-2.html"><small>← 이전 글</small><b>주휴수당 계산 방법</b></a><a class="nx" href="labor-2-4.html"><small>다음 글 →</small><b>4대보험 부담, 합법적으로 줄이는 법</b></a></div>
@@ -601,4 +612,9 @@ b.addEventListener("click",function(e){e.stopPropagation();set(!bar.classList.co
 document.addEventListener("click",function(e){if(!bar.contains(e.target))set(false);});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 window.addEventListener("resize",function(){if(window.innerWidth>640)set(false);});})();</script>
-</body></html>
+<script>(function(){var nav=document.getElementById("mega-nav"),bar=document.querySelector(".topbar"),bg=document.getElementById("tb-burger");if(!nav||!bar)return;
+function mob(){return window.innerWidth<=640;}
+nav.addEventListener("click",function(e){var b=e.target.closest(".nav-group-btn");if(!b||!mob())return;var g=b.closest(".nav-group");if(!g)return;e.stopPropagation();e.preventDefault();var open=g.classList.contains("m-exp");nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});if(!open)g.classList.add("m-exp");},true);
+function reset(){nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});}
+if(bg)bg.addEventListener("click",function(){setTimeout(function(){if(!bar.classList.contains("m-open"))reset();},0);});
+window.addEventListener("resize",function(){if(!mob())reset();});})();</script></body></html>
