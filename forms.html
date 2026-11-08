@@ -12,6 +12,23 @@
   .topbar-inner .nav-group.m-exp .nav-group-btn::after{transform:rotate(-135deg); margin-top:2px !important;}
   .topbar-inner .nav-group.m-exp .nav-group-btn{background:none !important;}
 }
+</style><style id="fc">
+.form-grid{grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;}
+.form-card{box-shadow:none !important; border:1px solid #e3e6ec; border-radius:14px; padding:22px 22px 24px; gap:0; position:relative; animation:none !important; transition:border-color .15s, box-shadow .15s;}
+.form-card:hover{border-color:#0b5cff; box-shadow:0 0 0 1px #0b5cff, 0 8px 22px rgba(11,92,255,.10) !important; animation:none !important;}
+.form-card:hover h4{color:var(--ink);}
+.cl-ic{display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:10px; margin:0 0 20px; flex:none;}
+.cl-ic svg{width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
+.form-card h4{font-size:19px; font-weight:800; letter-spacing:-.01em; color:var(--ink); margin:0 0 8px;}
+.form-card p{font-size:14.5px; line-height:1.65; color:var(--ink-soft); word-break:keep-all;}
+.form-tags{order:3; margin-top:14px;}
+.form-tags .tag-cat{display:none;}
+.form-tags .tag-sub{background:none; border:0; padding:0; font-size:13px; font-weight:500; color:var(--ink-faint);}
+.form-dl-row{order:4; margin-top:auto; padding-top:18px;}
+.form-card h4,.form-card p{order:1;} .form-card p{order:2;}
+.form-dl-btn{border-radius:14px;}
+@media (max-width:980px){.form-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:640px){.form-grid{grid-template-columns:minmax(0,1fr); gap:12px;} .form-card{padding:20px 20px 22px;}}
 </style></head><body>
 
 
@@ -235,7 +252,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
     </div>
 
     <div class="form-grid" id="form-grid">
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">매출·매입</span></div>
         <h4>세금계산서 서식</h4>
         <p>매출·매입 세금계산서를 발행할 때 바로 활용할 수 있는 기본 서식입니다.</p>
@@ -244,12 +261,12 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-pdf" href="https://drive.google.com/uc?export=download&id=1Mj77HzcQMprGhWxyR0wmSXIRWRP9IYT1" target="_blank" rel="noopener">PDF</a>
         </div>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">공동사업</span></div>
         <h4>동업계약서</h4>
         <p>공동사업자 간 출자 비율과 손익 분배 기준을 명확히 정리하는 계약서입니다.</p>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">법인 설립</span></div>
         <h4>개시대차대조표</h4>
         <p>신규 법인 설립 시 자본금과 초기 자산을 정리하는 개시 재무제표입니다.</p>
@@ -257,12 +274,12 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-xlsx" href="https://docs.google.com/spreadsheets/d/1jzGWPls4HyA_JggfjrCtDUAXyylCAAhB/export?format=xlsx" target="_blank" rel="noopener">엑셀</a>
         </div>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">사업 양수도</span></div>
         <h4>사업포괄양수도계약서</h4>
         <p>사업체 전부를 포괄적으로 양도·양수할 때 사용하는 계약서입니다.</p>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">사업장 임대</span></div>
         <h4>무상임대차확인서</h4>
         <p>대표자 소유 부동산을 무상으로 사업장에 임대할 때 필요한 확인서입니다.</p>
@@ -270,22 +287,22 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1Cvo_9n7z7iFmxe8mCVhoydPsJRw6w1aM" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">지출 관리</span></div>
         <h4>지출품의서(지출결의서)</h4>
         <p>지출 전 결재를 받고 근거를 남기기 위한 사내 품의 서식입니다.</p>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">채권 관리</span></div>
         <h4>받을어음원장</h4>
         <p>거래처로부터 수취한 어음의 발행·만기 내역을 관리하는 원장입니다.</p>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">비용 증빙</span></div>
         <h4>상품권지급대장</h4>
         <p>직원·거래처에 지급한 상품권 내역을 기록해 비용 처리 근거로 활용하는 대장입니다.</p>
       </div>
-      <div class="form-card" data-cat="tax">
+      <div class="form-card" data-cat="tax"><span class="cl-ic" style="background:#e8f0ff;color:#0b5cff"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">세무·회계</span><span class="tag tag-sub">법인 주주</span></div>
         <h4>주주명부</h4>
         <p>법인 주주의 성명, 주소, 보유 주식 수를 기재하는 서식입니다.</p>
@@ -293,7 +310,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-xlsx" href="https://docs.google.com/spreadsheets/d/1GeF3xZV6C_PsphFvcxhLXcLQdobxAp9U/export?format=xlsx" target="_blank" rel="noopener">엑셀</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">인건비 지급내역 정리용</span></div>
         <h4>인건비 서식(2026)</h4>
         <p>매월 지급할 인건비 내역을 정리해 세무대리인에게 전달하는 서식입니다.</p>
@@ -301,7 +318,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-xlsx" href="https://docs.google.com/spreadsheets/d/1hwpaSgs-VSF2h2fu8pzTVQH-G8ybHLDt/export?format=xlsx" target="_blank" rel="noopener">엑셀</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">4대보험 가입 근로자용</span></div>
         <h4>근로계약서(상용직)</h4>
         <p>4대보험에 가입하는 상용 근로자와 체결하는 표준 근로계약서입니다.</p>
@@ -309,7 +326,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1LH5asmuhfGmJw9HzObpHhJdfJ3uE-zC2" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">아르바이트</span></div>
         <h4>근로계약서(단시간근로자)</h4>
         <p>주 소정근로시간이 짧은 단시간(아르바이트) 근로자용 계약서입니다.</p>
@@ -317,7 +334,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1Jdekry9eLtZuAqP4NB7a8KfE2gEMBXTB" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">3.3% 계약용</span></div>
         <h4>프리랜서 용역계약서</h4>
         <p>3.3% 원천징수 대상 프리랜서와 용역 조건을 정하는 계약서입니다.</p>
@@ -326,7 +343,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1B0sNER0afD2elH4IkJ3RsfGcIi-vnr-j" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">현금 지급</span></div>
         <h4>급여현금지급확인원</h4>
         <p>급여를 현금으로 지급했을 때 수령 사실을 확인받는 서식입니다.</p>
@@ -335,7 +352,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1zw6MiqKVAublzDakTLC4cewEwhQubcqg" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">재직 증빙</span></div>
         <h4>재직증명서</h4>
         <p>현재 재직 중임을 증빙하기 위해 발급하는 확인서입니다.</p>
@@ -344,7 +361,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=12lb2Ak9JU1TzKzcBMg9aSaBpXVxQiZgB" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">미성년 근로자 채용 시</span></div>
         <h4>친권자후견인동의서</h4>
         <p>미성년 근로자를 채용할 때 부모(친권자)의 동의를 받는 서식입니다.</p>
@@ -353,7 +370,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1TptGX6J2wVpCXvxtl63Z4fnsggxKub_S" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">대표자</span></div>
         <h4>법인 대표자 무보수확인서</h4>
         <p>법인 대표자가 급여를 받지 않음을 확인하는 서식입니다.</p>
@@ -361,7 +378,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-gray" href="https://www.nhis.or.kr/static/html/wbdb/f/wbdbf1101.html" target="_blank" rel="noopener">서식 바로가기</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">계약 종료</span></div>
         <h4>해촉증명서</h4>
         <p>프리랜서·위촉 계약이 종료되었음을 증명하는 서식입니다.</p>
@@ -370,7 +387,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
           <a class="form-dl-btn form-dl-hwp" href="https://drive.google.com/uc?export=download&id=1jn6O7KcLajVmfoQYPCfIR2WhOzzv7gF9" target="_blank" rel="noopener">한글</a>
         </div>
       </div>
-      <div class="form-card" data-cat="labor">
+      <div class="form-card" data-cat="labor"><span class="cl-ic" style="background:#f3ebff;color:#7c3aed"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
         <div class="form-tags"><span class="tag tag-cat">인사·노무</span><span class="tag tag-sub">퇴사</span></div>
         <h4>사직서</h4>
         <p>근로자가 자발적으로 퇴사 의사를 밝힐 때 작성하는 서식입니다.</p>
