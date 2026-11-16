@@ -43,7 +43,7 @@
 .mn-soon{position:absolute; top:22px; right:22px; font-size:12px; font-weight:600; color:var(--ink-faint); background:#f1f3f7; border-radius:999px; padding:4px 10px;}
 .mn-back{display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:#1c3180 !important; text-decoration:none !important; margin:0 0 22px;}
 .mn-back:hover{text-decoration:underline !important; text-underline-offset:3px;}
-.mn-lead{font-size:16px; line-height:1.75; color:var(--ink-soft); margin:0 0 28px; word-break:keep-all; max-width:760px;}
+.mn-lead{font-size:16px; line-height:1.75; color:var(--ink-soft); margin:0 0 28px; word-break:keep-all; max-width:none;}
 .mn-body{min-height:200px;}
 .mn-empty{border:1px dashed #cdd5e6; border-radius:14px; padding:48px 24px; text-align:center; color:var(--ink-faint); font-size:15px; background:#fafbfe;}
 .mn-rel{margin-top:36px;}
@@ -345,7 +345,6 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 
 <section>
   <div class="wrap">
-    <a class="mn-back" href="customer-guide.html">&larr; 고객 매뉴얼 목록</a>
     <p class="mn-lead">홈택스 회원가입부터 자료 전달, 계약서 전자서명, 홈택스 수임동의, 이지스와 소통하는 방법까지 기장을 처음 시작할 때 필요한 내용을 순서대로 안내합니다.</p>
     <div class="mn-body" id="mn-body">
       <div class="ms-group" id="contract">
