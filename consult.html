@@ -558,7 +558,7 @@ a.cs-card:hover{border-color:var(--accent); box-shadow:0 4px 14px rgba(47,111,17
     if(type === "기타"){ var etc = (f.typeEtc.value || "").trim(); if(!etc) return say("기타 상담 유형을 입력해 주세요.", true); type = "기타: " + etc; }
     var method = (form.querySelector('input[name="method"]:checked') || {}).value || "";
     if(!method) return say("상담 방식을 선택해 주세요.", true);
-    if(msgTxt.length < 5) return say("문의 내용을 입력해 주세요.", true);
+    if(msgTxt.length < 5) return say("문의 내용을 5자 이상 입력해 주세요.", true);
     if(!ENDPOINT) return say("온라인 접수 기능이 아직 연결되지 않았습니다. 전화 또는 카카오톡으로 문의해 주세요.", true);
     btn.disabled = true; say("접수 중입니다...");
     fetch(ENDPOINT, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"},
