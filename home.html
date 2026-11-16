@@ -68,7 +68,7 @@
 .hc-tab:hover,.hc-tab.on{color:#fff;} .hc-tab:focus-visible{outline:2px solid #fff; outline-offset:4px;}
 .hc-bar{display:block; height:2px; background:rgba(255,255,255,.22); overflow:hidden;} .hc-bar i{display:block; height:100%; width:0; background:#3b8cff;}
 .hc-tab.done .hc-bar i{width:100%;}
-.hc-tab.on .hc-bar i{animation:hcFill var(--hc-dur,6s) linear forwards;}
+.hc-tab.on .hc-bar i{animation:hcFill var(--hc-dur,4.5s) linear forwards;}
 .hc-box.paused .hc-tab.on .hc-bar i{animation-play-state:paused;}
 @keyframes hcFill{from{width:0}to{width:100%}}
 .hc-tl{display:flex; align-items:center; gap:6px; white-space:nowrap;} .hc-tl svg{width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; opacity:.85;}
@@ -84,6 +84,99 @@
  .hc-panel{justify-content:center; min-height:380px;}
  .hc-tabs{position:absolute; left:56px; bottom:52px; margin:0; width:calc((100% - 112px - 48px) / 2.15); max-width:none; z-index:2;}
 }
+</style><style id="hcduo">
+.hc-duo{position:relative; width:100%; max-width:460px; display:flex; flex-direction:column;}
+.hc-duo .hc-ui{position:relative; width:60%; max-width:none; padding:14px 16px 14px;}
+.hc-c1{align-self:flex-start; z-index:1;}
+.hc-c2{align-self:flex-end; z-index:2; margin-top:-56px; box-shadow:0 18px 36px rgba(0,0,0,.45) !important;}
+.hc-duo .hc-ui-h{flex-direction:column; align-items:flex-start; gap:2px; margin-bottom:6px;} .hc-duo .hc-ui-h b{font-size:13.5px;} .hc-duo .hc-ui-h span{font-size:11.5px;}
+.hc-tb{list-style:none; margin:0; padding:0;} .hc-tb li{display:flex; justify-content:space-between; gap:8px; padding:3px 0; border-bottom:1px solid #f0f2f6; font-size:12px; color:#4b5468;} .hc-tb li b{color:#1c2438; font-weight:600;}
+.hc-duo .hc-res{margin-top:8px; padding:7px 10px;} .hc-duo .hc-res b{font-size:16px;}
+.hc-slide.on .hc-c2{transition-delay:.3s;}
+@media (max-width:560px){.hc-duo .hc-ui{width:72%; padding:12px 12px;} .hc-c2{margin-top:-14px;} .hc-tb li{font-size:11.5px;}}
+</style><style id="hcduo2">
+@media (min-width:561px){
+ .hc-duo{flex-direction:row; align-items:flex-start; max-width:520px;}
+ .hc-duo .hc-ui{width:52%;}
+ .hc-c1{align-self:flex-start;}
+ .hc-c2{align-self:flex-start; margin-top:44px !important; margin-left:-4%;} .hc-duo .hc-c1{padding-right:34px;}
+}
+</style><style id="hcapps">
+.hc-apps{background:none !important; box-shadow:none !important; padding:10px 0 !important; display:flex; justify-content:center; gap:20px; max-width:460px;}
+.hc-app{display:flex; flex-direction:column; align-items:center; gap:10px;}
+.hc-app .ai{width:84px; height:84px; border-radius:22px; display:grid; place-items:center; box-shadow:0 14px 30px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.25);}
+.hc-app .ai svg{width:50px; height:50px;}
+.hc-app b{color:#fff; font-size:14px; font-weight:700;}
+.a1 .ai{background:linear-gradient(160deg,#34d36a,#12a94a);}
+.a2 .ai{background:linear-gradient(160deg,#ffe94d,#fdd800);}
+.a3 .ai{background:linear-gradient(160deg,#4d8bff,#1f5fe8);} .a4 .ai{background:linear-gradient(160deg,#ff9a4d,#ff6a2b);}
+.hc-app.a2,.hc-app.a4{transform:translateY(-14px);}
+.hc-slide .hc-app{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s cubic-bezier(.22,1,.36,1);}
+.hc-slide.on .hc-app{opacity:1; transform:none;} .hc-slide.on .hc-app.a2{transform:translateY(-14px); transition-delay:.12s;} .hc-slide.on .hc-app.a3{transition-delay:.24s;} .hc-slide.on .hc-app.a4{transform:translateY(-14px); transition-delay:.36s;}
+@media (max-width:560px){.hc-apps{gap:12px;} .hc-app .ai{width:60px; height:60px; border-radius:16px;} .hc-app .ai svg{width:34px; height:34px;} .hc-app b{font-size:12.5px;}}
+</style><style id="hcmn">
+.hc-mn{width:100%; max-width:470px; display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.hc-mc{position:relative; background:#fff; border:1px solid #e3e6ec; border-radius:4px; padding:14px 14px 13px; box-shadow:0 10px 24px rgba(0,0,0,.35);}
+.hc-mc .t{display:flex; align-items:flex-start; gap:6px; margin:0 0 6px !important; font-size:13.5px !important; font-weight:800; color:#1c2438 !important; line-height:1.35; word-break:keep-all;}
+.hc-mc .i{flex:none; display:inline-flex; margin-top:1px;} .hc-mc .i svg{width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+.hc-mc .d{margin:0 !important; font-size:11.5px !important; line-height:1.55; color:#4b5468 !important; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; word-break:keep-all;}
+.hc-mc .sn{position:absolute; top:12px; right:10px; font-size:10px; font-weight:600; color:#7b8496; background:#f1f3f7; border-radius:999px; padding:2px 7px;}
+.hc-mc:first-child{border-color:#0b5cff; box-shadow:0 0 0 1px #0b5cff, 0 12px 28px rgba(11,92,255,.35);}
+.hc-slide .hc-mc{opacity:0; transform:translateY(12px); transition:opacity .45s ease, transform .5s cubic-bezier(.22,1,.36,1);}
+.hc-slide.on .hc-mc{opacity:1; transform:none;} .hc-slide.on .hc-mc:nth-child(2){transition-delay:.08s} .hc-slide.on .hc-mc:nth-child(3){transition-delay:.16s} .hc-slide.on .hc-mc:nth-child(4){transition-delay:.24s}
+@media (max-width:560px){.hc-mn{gap:8px;} .hc-mc{padding:11px 10px;} .hc-mc .t{font-size:12.5px !important; padding-right:0;} .hc-mc .sn{position:static; display:inline-block; margin-top:6px;}}
+</style><style id="hcph">.ph-in{display:flex; justify-content:space-between; align-items:center; padding:6px 8px; border-top:1px solid #eef0f4; font-size:8.5px; color:#9aa3b5; background:#fff;} .ph-in i{font-style:normal; width:16px; height:16px; border-radius:50%; background:#fee500; color:#3c1e1e; display:grid; place-items:center; font-size:9px; font-weight:800;} 
+.hc-ph{position:relative; background:none !important; box-shadow:none !important; padding:0 !important; max-width:none !important; width:100%; height:300px;}
+.ph-bg{position:absolute; left:-12px; right:-12px; top:50%; transform:translateY(-50%); display:flex; justify-content:space-between; pointer-events:none;}
+.ph-ic{width:78px; height:78px; border-radius:20px; display:grid; place-items:center; opacity:.55; filter:blur(1.2px) saturate(.9);}
+.ph-ic svg{width:42px; height:42px;}
+.ph-ic.p1{background:linear-gradient(160deg,#34d36a,#12a94a);} .ph-ic.p2{background:linear-gradient(160deg,#ffe94d,#fdd800); margin-right:auto; margin-left:14px;} .ph-ic.p3{background:linear-gradient(160deg,#4d8bff,#1f5fe8); margin-right:14px;} .ph-ic.p4{background:linear-gradient(160deg,#ff9a4d,#ff6a2b);}
+.ph-lb{position:absolute; left:6px; top:2px; margin:0 !important; font-size:17px !important; font-weight:800; line-height:1.35; color:#fff !important; z-index:1;}
+.ph{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:176px; height:296px; background:#fff; border-radius:22px; border:4px solid #eef1f6; box-shadow:0 18px 40px rgba(0,0,0,.5); overflow:hidden; z-index:2; display:flex; flex-direction:column;}
+.ph-st{display:flex; justify-content:space-between; align-items:center; padding:6px 12px 2px; font-size:9px; color:#1c2438;} .ph-st i{width:22px; height:7px; border-radius:2px; background:#1c2438; opacity:.8;}
+.ph-hd{display:flex; justify-content:space-between; align-items:center; padding:4px 10px 6px; font-size:10px; color:#1c2438; border-bottom:1px solid #eef0f4;} .ph-hd span{width:10px; font-size:13px; line-height:1;}
+.ph-chat{flex:1; background:#bacee0; padding:8px 7px; display:flex; flex-direction:column; gap:6px; overflow:hidden;}
+.ph-m{display:flex; gap:4px; align-items:flex-start;} .ph-m.r{justify-content:flex-end;}
+.ph-m .av{flex:none; width:18px; height:18px; border-radius:7px; background:#fff; display:grid; place-items:center;} .ph-m .av svg{width:13px; height:13px;}
+.ph-m small{display:block; font-size:7.5px; color:#4b5468; margin:0 0 2px;}
+.ph-m p{margin:0 !important; max-width:118px; padding:5px 7px; border-radius:8px; font-size:8.5px !important; line-height:1.45; color:#1c2438 !important; background:#fff; word-break:keep-all;}
+.ph-m.r p{background:#fee500; max-width:110px;}
+.ph-chip{position:absolute; z-index:3; padding:6px 12px; border-radius:14px; font-size:12.5px; font-weight:700; color:#fff; box-shadow:0 8px 18px rgba(0,0,0,.35);}
+.ph-chip.c1{left:22%; bottom:34px; background:#12a94a; border-bottom-right-radius:4px;} .ph-chip.c2{right:20%; top:44px; background:#ff6a2b; border-bottom-left-radius:4px;}
+.hc-slide .ph,.hc-slide .ph-chip{opacity:0; transition:opacity .5s ease, transform .6s cubic-bezier(.22,1,.36,1);} .hc-slide .ph{transform:translate(-50%,-44%);} .hc-slide .ph-chip{transform:scale(.85);}
+.hc-slide.on .ph{opacity:1; transform:translate(-50%,-50%); transition-delay:.1s;} .hc-slide.on .ph-chip{opacity:1; transform:none; transition-delay:.45s;} .hc-slide.on .ph-chip.c2{transition-delay:.6s;}
+@media (max-width:560px){.hc-ph{height:290px;} .ph-lb{display:none;} .ph-ic{width:56px; height:56px; border-radius:15px;} .ph-ic svg{width:30px; height:30px;} .ph-ic.p2{margin-left:4px;} .ph-ic.p3{margin-right:4px;} .ph-chip{font-size:11px; padding:5px 10px;} .ph-chip.c1{left:4%;} .ph-chip.c2{right:2%;}}
+</style><style id="hcph2">.ph{height:236px !important;} .ph-chip.c1{bottom:22px !important; left:16% !important;} @media (max-width:560px){.ph-chip.c1{bottom:52px !important; left:4% !important;}} 
+.ph-hd{justify-content:center !important; padding:6px 10px 10px !important; font-size:11px !important;}
+.ph-chat{background:#f3f5f9 !important; padding:14px 10px !important; gap:10px !important; justify-content:flex-start;}
+.ph-m p{max-width:128px !important; padding:8px 10px !important; border-radius:12px !important; font-size:10px !important; line-height:1.5 !important;}
+.ph-m.r p{background:#fee500 !important; border-bottom-right-radius:4px !important;}
+.ph-m.l p{background:#fff !important; border-bottom-left-radius:4px !important; box-shadow:0 1px 2px rgba(0,0,0,.06);}
+.ph-st i{display:none;}
+</style><style id="sc">
+.sc{padding:0 24px 96px;}
+.sc-in{max-width:1072px; margin:0 auto; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;} .sc-card{min-width:0; margin:0; border:1px solid rgba(255,255,255,.14); border-radius:8px; padding:36px 40px 32px; color:#fff;}
+.sc-hd{display:flex; justify-content:space-between; align-items:flex-start; gap:16px;}
+.sc-t{color:#fff !important; font-size:22px; font-weight:800; margin:0;} .sc-u{margin:6px 0 0; font-size:13px; color:rgba(255,255,255,.55);}
+.sc-go{font-size:14px; color:rgba(255,255,255,.7) !important; text-decoration:none !important;} .sc-go:hover{color:#fff !important;}
+.sc-gauge{position:relative; width:340px; max-width:100%; margin:18px auto 10px;}
+.sc-gauge svg{display:block; width:100%; height:auto; overflow:visible;}
+.sc-arc-bg{fill:none; stroke:#2a2d34; stroke-width:12; stroke-linecap:round;}
+.sc-arc{fill:none; stroke:#2fe06b; stroke-width:12; stroke-linecap:round; transition:stroke-dashoffset 1.4s cubic-bezier(.22,1,.36,1);}
+.sc-dot{fill:#151619; stroke:#ffb020; stroke-width:3;} .sc-dot.past{stroke:#2fe06b; fill:#2fe06b;}
+.sc-dl{fill:rgba(255,255,255,.6); font-size:11px; font-weight:600; text-anchor:middle;}
+.sc-mid{position:absolute; left:0; right:0; bottom:0; display:flex; flex-direction:column; align-items:center; gap:4px;}
+.sc-ic{width:30px; height:30px; border-radius:50%; background:#2fe06b; display:grid; place-items:center;} .sc-ic svg{width:18px; height:18px; fill:none; stroke:#151619; stroke-width:3; stroke-linecap:round; stroke-linejoin:round;}
+.sc-ic.warn{background:#ffb020;}
+.sc-mid b{font-size:22px; font-weight:800; color:#fff;} .sc-mid span:last-child{font-size:13.5px; color:rgba(255,255,255,.75); text-align:center; word-break:keep-all;}
+.sc-box{background:#1f2125; border-radius:6px; padding:18px 20px; display:grid; gap:10px; margin-top:22px;}
+.sc-row{display:flex; gap:16px; align-items:flex-start;}
+.sc-lab{flex:none; width:64px; font-size:13.5px; font-weight:700;} .sc-lab.up{color:#ffb020;} .sc-lab.past{color:#2fe06b;}
+.sc-row ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:4px 0;}
+.sc-row li{font-size:14px; color:#fff; padding:0 12px; border-left:1px solid rgba(255,255,255,.18); line-height:1.6;} .sc-row li:first-child{padding-left:0; border-left:0;}
+.sc-row li em{font-style:normal; color:rgba(255,255,255,.5); font-size:12.5px; margin-left:2px;}
+.sc-row li{padding:0 !important; border:0 !important; width:100%;} 
+@media (max-width:900px){.sc-in{grid-template-columns:1fr;} .sc-slot{display:none;}} @media (max-width:560px){.sc{padding:0 16px 64px;} .sc-card{padding:24px 18px;} .sc-t{font-size:19px;} .sc-row{flex-direction:column; gap:6px;} .sc-row li{padding:0; border:0; width:100%;}}
 </style></head><body><div class="nb" role="region" aria-label="운영 안내"><div class="nb-in"><div class="nb-track"><div class="nb-grp"><p class="nb-tx"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p></div><div class="nb-grp" aria-hidden="true"><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p></div></div></div></div>
 
 
@@ -368,16 +461,11 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 </style>
 
 <div class="zw">
-  <div class="zb" id="zb"><div class="zb-in">
-    <div class="zb-txt" id="zb-txt" aria-live="off">
-      <span class="zb-msg on" data-href="tax2027.html">2027년부터 새로 바뀌는 사업자 세금, 미리 확인하세요</span>
-      <span class="zb-msg" data-href="umbrella.html">자영업자의 퇴직금! 노란우산공제를 만나보세요</span>
-    </div>
-  </div></div>
+  
 
 <section class="hc" aria-roledescription="carousel" aria-label="주요 서비스 안내">
   <div class="hc-box">
-    <div class="hc-stage"><div class="hc-slide on" data-i="0" aria-hidden="false"><div class="hc-txt"><span class="hc-tag">세무일정</span><h2>이번 달 신고·납부 기한을<br>한눈에</h2><p>부가세, 원천세, 종합소득세 등 놓치기 쉬운 기한을 <br>달력으로 미리 확인하세요.</p><a class="hc-go" href="calendar.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-cal"><div class="hc-ui-h"><b>이번 달 세무일정</b><span>예시</span></div><div class="hc-days"><i class="">1</i><i class="">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i><i class="">7</i><i class="">8</i><i class="">9</i><i class="on">10</i><i class="">11</i><i class="">12</i><i class="">13</i><i class="">14</i><i class="">15</i><i class="">16</i><i class="">17</i><i class="">18</i><i class="">19</i><i class="">20</i><i class="">21</i><i class="">22</i><i class="">23</i><i class="">24</i><i class="">25</i><i class="">26</i><i class="">27</i><i class="">28</i></div><ul class="hc-leg"><li><em class="d1"></em>10일 원천세 신고·납부</li><li><em class="d1"></em>10일 4대 보험료 납부</li></ul></div><p class="hc-cap">매달 바뀌는 세무일정을 미리 확인할 수 있어요</p></div></div></div><div class="hc-slide" data-i="1" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">고객 매뉴얼</span><h2>기장 시작부터 매달 업무까지<br>순서대로 안내해요</h2><p>홈택스 가입, 수임동의, 원천세 업무까지 <br>필요한 절차를 단계별로 정리했습니다.</p><a class="hc-go" href="customer-guide.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-list"><div class="hc-ui-h"><b>고객 매뉴얼</b></div><div class="hc-row"><span class="ck">✓</span><div><b>신규 고객 시작 가이드</b><small>회원가입 · 자료 전달 · 수임동의</small></div></div><div class="hc-row"><span class="ck">✓</span><div><b>원천세 업무 가이드</b><small>매달 인건비 업무 흐름</small></div></div><div class="hc-row dim"><span class="ck">·</span><div><b>부가세 신고 가이드</b><small>준비 중</small></div></div></div><p class="hc-cap">처음 시작할 때 필요한 절차를 한곳에 모았어요</p></div></div></div><div class="hc-slide" data-i="2" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">간편 계산기</span><h2>4대보험료·퇴직금,<br>바로 계산해 보세요</h2><p>주휴수당, 원천징수, 퇴직금을 숫자만 입력하면 <br>바로 확인할 수 있습니다.</p><a class="hc-go" href="calculator.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-calc"><div class="hc-ui-h"><b>주휴수당 계산기</b></div><div class="hc-in2"><div><small>시급</small><b>10,320원</b></div><div><small>주 소정근로시간</small><b>20시간</b></div></div><div class="hc-res"><small>주휴수당 (1주)</small><b>41,280원</b></div></div><p class="hc-cap">계산 결과는 카카오톡으로 바로 공유할 수 있어요</p></div></div></div><div class="hc-slide" data-i="3" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">상담하기</span><h2>궁금한 점은<br>세무사에게 직접 물어보세요</h2><p>전화, 카카오톡, 온라인으로 편하게 문의하시면 <br>세무사가 직접 연락드립니다.</p><a class="hc-go" href="consult.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-chat"><div class="hc-b me">직원을 처음 뽑는데 4대보험은 어떻게 하나요?</div><div class="hc-b you">입사일과 급여 조건을 알려 주시면 취득신고와 원천세 신고까지 안내해 드릴게요.</div><div class="hc-b me sm">감사합니다!</div></div><p class="hc-cap">남겨 주신 문의는 1영업일 이내에 연락드려요</p></div></div></div></div>
+    <div class="hc-stage"><div class="hc-slide on" data-i="0" aria-hidden="false"><div class="hc-txt"><span class="hc-tag">세무일정</span><h2>이번 달 신고·납부 기한을<br>한눈에</h2><p>부가세, 원천세, 종합소득세 등 놓치기 쉬운 기한을 <br>달력으로 미리 확인하세요.</p><a class="hc-go" href="calendar.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-cal"><div class="hc-ui-h"><b>이번 달 세무일정</b><span>예시</span></div><div class="hc-days"><i class="">1</i><i class="">2</i><i class="">3</i><i class="">4</i><i class="">5</i><i class="">6</i><i class="">7</i><i class="">8</i><i class="">9</i><i class="on">10</i><i class="">11</i><i class="">12</i><i class="">13</i><i class="">14</i><i class="">15</i><i class="">16</i><i class="">17</i><i class="">18</i><i class="">19</i><i class="">20</i><i class="">21</i><i class="">22</i><i class="">23</i><i class="">24</i><i class="">25</i><i class="">26</i><i class="">27</i><i class="">28</i></div><ul class="hc-leg"><li><em class="d1"></em>10일 원천세 신고·납부</li><li><em class="d1"></em>10일 4대 보험료 납부</li></ul></div><p class="hc-cap">매달 바뀌는 세무일정을 미리 확인할 수 있어요</p></div></div></div><div class="hc-slide" data-i="1" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">고객 매뉴얼</span><h2>기장 시작부터 매달 업무까지<br>순서대로 안내해요</h2><p>홈택스 가입, 수임동의, 원천세 업무까지 <br>필요한 절차를 단계별로 정리했습니다.</p><a class="hc-go" href="customer-guide.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-mn"><div class="hc-mc"><p class="t"><span class="i" style="color:#0b5cff"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>신규 고객 시작 가이드</p><p class="d">홈택스 가입부터 자료 전달, 전자서명, 수임동의, 소통 방법까지 안내합니다.</p></div><div class="hc-mc"><p class="t"><span class="i" style="color:#7c3aed"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span>원천세 업무 가이드</p><p class="d">원천세 신고 일정부터 인건비 자료 전달, 급여 지급, 납부까지 안내합니다.</p></div><div class="hc-mc"><p class="t"><span class="i" style="color:#0a9d4f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>부가세 신고 가이드</p><p class="d">부가가치세 신고 일정과 준비 자료, 매출·매입 증빙 관리 방법을 안내합니다.</p></div><div class="hc-mc"><p class="t"><span class="i" style="color:#ea4a1f"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>종합소득세 신고 가이드</p><p class="d">5월 종합소득세 신고 일정과 준비 자료, 공제 서류 안내를 정리합니다.</p></div></div><p class="hc-cap">처음 시작할 때 필요한 절차를 한곳에 모았어요</p></div></div></div><div class="hc-slide" data-i="2" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">간편 계산기</span><h2>4대보험료·퇴직금,<br>바로 계산해 보세요</h2><p>주휴수당, 원천징수, 퇴직금을 숫자만 입력하면 <br>바로 확인할 수 있습니다.</p><a class="hc-go" href="calculator.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-duo"><div class="hc-ui hc-c1"><div class="hc-ui-h"><b>4대보험료 계산기</b><span>월 급여 3,000,000원</span></div><ul class="hc-tb"><li><span>국민연금</span><b>142,500원</b></li><li><span>건강보험</span><b>107,850원</b></li><li><span>장기요양보험</span><b>14,170원</b></li><li><span>고용보험</span><b>27,000원</b></li></ul><div class="hc-res"><small>근로자 4대보험 합계</small><b>291,520원</b></div></div><div class="hc-ui hc-c2"><div class="hc-ui-h"><b>3.3% 원천징수 계산기</b></div><ul class="hc-tb"><li><span>용역비</span><b>1,000,000원</b></li><li><span>소득세 3%</span><b>30,000원</b></li><li><span>지방소득세</span><b>3,000원</b></li></ul><div class="hc-res"><small>실제 지급액</small><b>967,000원</b></div></div></div><p class="hc-cap">4대보험료와 3.3% 원천징수를 바로 계산할 수 있어요</p></div></div></div><div class="hc-slide" data-i="3" aria-hidden="true"><div class="hc-txt"><span class="hc-tag">상담하기</span><h2>궁금한 점은<br>세무사에게 직접 물어보세요</h2><p>전화, 카카오톡, 온라인으로 편하게 문의하시면 <br>세무사가 직접 연락드립니다.</p><a class="hc-go" href="consult.html">자세히 보기 <span aria-hidden="true">›</span></a></div><div class="hc-vis"><div class="hc-panel"><div class="hc-ui hc-ph"><div class="ph-bg"><span class="ph-ic p1"><svg viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4-2 1.5a12 12 0 0 0 6.4 6.4l1.5-2 4 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="#fff"/></svg></span><span class="ph-ic p2"><svg viewBox="0 0 24 24"><path d="M12 4.5c-4.9 0-8.8 3-8.8 6.8 0 2.4 1.6 4.5 4 5.7l-.9 3.4c-.1.3.3.5.5.3l4-2.7h1.2c4.9 0 8.8-3 8.8-6.7S16.9 4.5 12 4.5z" fill="#3c1e1e"/></svg></span><span class="ph-ic p3"><svg viewBox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H9.5L5 21v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z" fill="#fff"/><circle cx="8" cy="11.5" r="1.2" fill="#2f6bff"/><circle cx="12" cy="11.5" r="1.2" fill="#2f6bff"/><circle cx="16" cy="11.5" r="1.2" fill="#2f6bff"/></svg></span><span class="ph-ic p4"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="#fff"/><path d="M3.8 6.6l8.2 6.2 8.2-6.2" fill="none" stroke="#ff6a2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><p class="ph-lb">세무사와<br>1:1 상담</p><div class="ph"><div class="ph-st"><b>9:41</b><i></i></div><div class="ph-hd"><b>세무 상담</b></div><div class="ph-chat"><div class="ph-m r"><p>아파트를 자녀에게 증여하면 세금이 얼마나 나올까요?</p></div><div class="ph-m l"><p>시세와 대출 여부를 알려 주시면 증여세와 취득세를 함께 계산해 드릴게요.</p></div></div></div><span class="ph-chip c1">전화 상담</span><span class="ph-chip c2">이메일 문의</span></div><p class="hc-cap">남겨 주신 문의는 1영업일 이내에 연락드려요</p></div></div></div></div>
     <div class="hc-tabs" role="tablist"><button type="button" class="hc-tab on" data-i="0"><span class="hc-bar"><i></i></span><span class="hc-tl">세무일정</span></button><button type="button" class="hc-tab" data-i="1"><span class="hc-bar"><i></i></span><span class="hc-tl">고객 매뉴얼</span></button><button type="button" class="hc-tab" data-i="2"><span class="hc-bar"><i></i></span><span class="hc-tl">간편 계산기</span></button><button type="button" class="hc-tab" data-i="3"><span class="hc-bar"><i></i></span><span class="hc-tl">상담하기</span></button></div>
   </div>
 </section>
@@ -386,6 +474,14 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
     <h2 class="rc-h">추천 콘텐츠</h2>
     <div class="rc-grid" id="rc-grid"></div>
   </div>
+</section>
+<section class="sc" aria-label="이번 달 세무일정">
+  <div class="sc-in"><div class="sc-card">
+    <div class="sc-hd"><div><h2 class="sc-t" id="sc-t">이번 달 세무일정</h2><p class="sc-u" id="sc-u"></p></div><a class="sc-go" href="calendar.html">바로가기</a></div>
+    <div class="sc-gauge"><svg viewBox="0 0 320 170" aria-hidden="true"><path class="sc-arc-bg" d="M20 160 A140 140 0 0 1 300 160"/><path class="sc-arc" id="sc-arc" d="M20 160 A140 140 0 0 1 300 160"/><g id="sc-dots"></g></svg>
+      <div class="sc-mid"><span class="sc-ic" id="sc-ic"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></span><b id="sc-dday"></b><span id="sc-next"></span></div></div>
+    <div class="sc-box" id="sc-box"></div>
+  </div><div class="sc-slot" aria-hidden="true"></div></div>
 </section>
 </div>
 
@@ -446,7 +542,7 @@ function mob(){return window.innerWidth<=640;}
 nav.addEventListener("click",function(e){var b=e.target.closest(".nav-group-btn");if(!b||!mob())return;var g=b.closest(".nav-group");if(!g)return;e.stopPropagation();e.preventDefault();var open=g.classList.contains("m-exp");nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});if(!open)g.classList.add("m-exp");},true);
 function reset(){nav.querySelectorAll(".nav-group.m-exp").forEach(function(x){x.classList.remove("m-exp");});}
 if(bg)bg.addEventListener("click",function(){setTimeout(function(){if(!bar.classList.contains("m-open"))reset();},0);});
-window.addEventListener("resize",function(){if(!mob())reset();});})();</script><script id="hcjs">(function(){var box=document.querySelector(".hc-box");if(!box)return;var sl=[].slice.call(box.querySelectorAll(".hc-slide")),tb=[].slice.call(box.querySelectorAll(".hc-tab")),cur=0,DUR=6000,t=null,left=DUR,start=0,red=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+window.addEventListener("resize",function(){if(!mob())reset();});})();</script><script id="hcjs">(function(){var box=document.querySelector(".hc-box");if(!box)return;var sl=[].slice.call(box.querySelectorAll(".hc-slide")),tb=[].slice.call(box.querySelectorAll(".hc-tab")),cur=0,DUR=4500,t=null,left=DUR,start=0,red=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 function show(i){cur=(i+sl.length)%sl.length;sl.forEach(function(s,k){var on=k===cur;s.classList.toggle("on",on);s.setAttribute("aria-hidden",on?"false":"true");});tb.forEach(function(b,k){b.classList.remove("on");b.classList.toggle("done",k<cur);b.setAttribute("aria-selected",k===cur?"true":"false");});void box.offsetWidth;tb[cur].classList.add("on");left=DUR;run();}
 function run(){clearTimeout(t);if(red)return;start=Date.now();t=setTimeout(function(){show(cur+1);},left);}
 tb.forEach(function(b,k){b.addEventListener("click",function(){show(k);});});
@@ -467,9 +563,9 @@ body{background:#151619 !important;}
 .topbar.is-scrolled .tb-burger{color:#fff !important;}
 .hc{background:none !important; padding:72px 24px 40px !important;}
 .hc-box{background:none !important; box-shadow:none !important; border-radius:0 !important; overflow:visible !important; padding:0 !important; max-width:1072px;}
-.hc-panel{background:#0d1340 !important; border:3px solid #fff; border-radius:8px !important;}
+.hc-panel{background:#0d1340 !important; border:0 !important; border-radius:8px !important;}
 @media (min-width:901px){.hc-tabs{left:0 !important; bottom:0 !important; width:calc((100% - 48px) / 2.15) !important;} .hc-txt{padding:24px 0 92px !important;}}
-.rc{padding:56px 24px 96px;}
+.rc{padding:56px 24px 64px;}
 .rc-in{max-width:1072px; margin:0 auto; display:grid; grid-template-columns:200px minmax(0,1fr); gap:24px;}
 .rc-h{color:#fff !important; font-size:22px; font-weight:800; margin:0; padding-top:10px;}
 .rc-grid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr));}
@@ -489,4 +585,45 @@ for(var i=pool.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=p
 var g=document.getElementById("rc-grid");if(!g)return;
 pool.slice(0,4).forEach(function(x){var a=document.createElement("a");a.className="rc-item";a.href=x.u;
 var c=document.createElement("span");c.className="rc-c";c.textContent=x.c;var t=document.createElement("b");t.className="rc-t";t.textContent=x.t;var d=document.createElement("span");d.className="rc-d";d.textContent=x.d;
-a.appendChild(c);a.appendChild(t);a.appendChild(d);g.appendChild(a);});})();</script></body></html>
+a.appendChild(c);a.appendChild(t);a.appendChild(d);g.appendChild(a);});})();</script><script id="scjs">(function(){
+/* 일정 데이터는 세무일정 페이지(calendar.html)와 같습니다. 일정을 바꾸면 두 곳을 함께 고쳐 주세요. */
+var SCHEDULE = {
+    1:  [{tag:'공통', label:'원천세 (12월 지급분)', date:'1월 10일'}, {tag:'공통', label:'4대보험 납부 (12월분)', date:'1월 10일'}, {tag:'공통', label:'세금계산서 발급 (12월 공급분)', date:'1월 10일'}, {tag:'공통', label:'부가가치세 2기 확정신고', date:'1월 25일'}],
+    2:  [{tag:'공통', label:'원천세 (1월 지급분)', date:'2월 10일'}, {tag:'공통', label:'4대보험 납부 (1월분)', date:'2월 10일'}, {tag:'공통', label:'세금계산서 발급 (1월 공급분)', date:'2월 10일'}, {tag:'개인', label:'사업장현황신고 (면세사업자)', date:'2월 10일'}],
+    3:  [{tag:'공통', label:'원천세 (2월 지급분)', date:'3월 10일'}, {tag:'공통', label:'4대보험 납부 (2월분)', date:'3월 10일'}, {tag:'공통', label:'세금계산서 발급 (2월 공급분)', date:'3월 10일'}, {tag:'법인', label:'법인세 신고·납부(일반 법인)', date:'3월 31일'}],
+    4:  [{tag:'공통', label:'원천세 (3월 지급분)', date:'4월 10일'}, {tag:'공통', label:'4대보험 납부 (3월분)', date:'4월 10일'}, {tag:'공통', label:'세금계산서 발급 (3월 공급분)', date:'4월 10일'}, {tag:'법인', label:'부가가치세 1기 예정신고', date:'4월 25일'}, {tag:'개인', label:'부가세 예정고지(일반과세자)', date:'4월 25일'}, {tag:'법인', label:'법인세 신고·납부(성실신고 법인)', date:'4월 30일'}],
+    5:  [{tag:'공통', label:'원천세 (4월 지급분)', date:'5월 10일'}, {tag:'공통', label:'4대보험 납부 (4월분)', date:'5월 10일'}, {tag:'공통', label:'세금계산서 발급 (4월 공급분)', date:'5월 10일'}, {tag:'개인', label:'종합소득세 신고·납부(일반)', date:'5월 31일'}],
+    6:  [{tag:'공통', label:'원천세 (5월 지급분)', date:'6월 10일'}, {tag:'공통', label:'4대보험 납부 (5월분)', date:'6월 10일'}, {tag:'공통', label:'세금계산서 발급 (5월 공급분)', date:'6월 10일'}, {tag:'개인', label:'종합소득세 신고·납부(성실신고)', date:'6월 30일'}],
+    7:  [{tag:'공통', label:'원천세 (6월 지급분)', date:'7월 10일'}, {tag:'공통', label:'4대보험 납부 (6월분)', date:'7월 10일'}, {tag:'공통', label:'세금계산서 발급 (6월 공급분)', date:'7월 10일'}, {tag:'공통', label:'부가가치세 1기 확정신고', date:'7월 25일'}, {tag:'공통', label:'재산세 납부(주택 1기분·건축물)', date:'7월 31일'}],
+    8:  [{tag:'공통', label:'원천세 (7월 지급분)', date:'8월 10일'}, {tag:'공통', label:'4대보험 납부 (7월분)', date:'8월 10일'}, {tag:'공통', label:'세금계산서 발급 (7월 공급분)', date:'8월 10일'}, {tag:'법인', label:'법인세 중간예납(12월 결산법인)', date:'8월 31일'}],
+    9:  [{tag:'공통', label:'원천세 (8월 지급분)', date:'9월 10일'}, {tag:'공통', label:'4대보험 납부 (8월분)', date:'9월 10일'}, {tag:'공통', label:'세금계산서 발급 (8월 공급분)', date:'9월 10일'}, {tag:'공통', label:'재산세 납부(주택 2기분·건축물 등)', date:'9월 30일'}],
+    10: [{tag:'공통', label:'원천세 (9월 지급분)', date:'10월 10일'}, {tag:'공통', label:'4대보험 납부 (9월분)', date:'10월 10일'}, {tag:'공통', label:'세금계산서 발급 (9월 공급분)', date:'10월 10일'}, {tag:'법인', label:'부가가치세 2기 예정신고', date:'10월 25일'}, {tag:'개인', label:'부가세 예정고지(일반과세자)', date:'10월 25일'}],
+    11: [{tag:'공통', label:'원천세 (10월 지급분)', date:'11월 10일'}, {tag:'공통', label:'4대보험 납부 (10월분)', date:'11월 10일'}, {tag:'공통', label:'세금계산서 발급 (10월 공급분)', date:'11월 10일'}, {tag:'개인', label:'종합소득세 중간예납', date:'11월 30일'}],
+    12: [{tag:'공통', label:'원천세 (11월 지급분)', date:'12월 10일'}, {tag:'공통', label:'4대보험 납부 (11월분)', date:'12월 10일'}, {tag:'공통', label:'세금계산서 발급 (11월 공급분)', date:'12월 10일'}]
+  };
+var HOLIDAYS = {
+    2026:['01-01','02-16','02-17','02-18','03-01','03-02','05-05','05-24','05-25','06-03','06-06','07-17','08-15','08-17','09-24','09-25','09-26','10-03','10-05','10-09','12-25'],
+    2027:['01-01','02-06','02-07','02-08','02-09','03-01','05-03','05-05','05-13','06-06','07-17','07-19','08-15','08-16','09-14','09-15','09-16','10-03','10-04','10-09','10-11','12-25','12-27']
+  };
+function pad(n){return (n<10?'0':'')+n;}
+function isOff(dt){var w=dt.getDay();if(w===0||w===6)return true;var l=HOLIDAYS[dt.getFullYear()];return !!l&&l.indexOf(pad(dt.getMonth()+1)+'-'+pad(dt.getDate()))>=0;}
+function due(y,str){var m=/(\d+)월\s*(\d+)일/.exec(str);var dt=new Date(y,+m[1]-1,+m[2]);while(isOff(dt))dt.setDate(dt.getDate()+1);return dt;}
+var now=new Date(),y=now.getFullYear(),mo=now.getMonth()+1,today=new Date(y,now.getMonth(),now.getDate());
+var last=new Date(y,mo,0).getDate();
+document.getElementById('sc-t').textContent=mo+'월 세무일정';
+document.getElementById('sc-u').textContent=String(y).slice(2)+'.'+pad(mo)+'.'+pad(now.getDate())+' 기준';
+var items=(SCHEDULE[mo]||[]).map(function(it){var d=due(y,it.date);return {l:it.label,d:d,past:d<today};});
+var groups={};items.forEach(function(it){var k=it.d.getTime();(groups[k]=groups[k]||[]).push(it);});
+var up=items.filter(function(x){return !x.past;}).sort(function(a,b){return a.d-b.d;});
+var arc=document.getElementById('sc-arc'),L=arc.getTotalLength(),frac=(now.getDate()-1+now.getHours()/24)/last;
+arc.style.strokeDasharray=L;arc.style.strokeDashoffset=L;
+requestAnimationFrame(function(){requestAnimationFrame(function(){arc.style.strokeDashoffset=L*(1-frac);});});
+var dots=document.getElementById('sc-dots'),ns='http://www.w3.org/2000/svg';
+Object.keys(groups).forEach(function(k){var d=new Date(+k);if(d.getMonth()+1!==mo)return;var f=(d.getDate()-.5)/last,p=arc.getPointAtLength(L*f);var c=document.createElementNS(ns,'circle');c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.setAttribute('r',7);c.setAttribute('class','sc-dot'+(d<today?' past':''));dots.appendChild(c);
+var t=document.createElementNS(ns,'text');var ang=Math.PI*(1-f);t.setAttribute('x',160+112*Math.cos(ang));t.setAttribute('y',160-112*Math.sin(ang)+4);t.setAttribute('class','sc-dl');t.textContent=d.getDate()+'일';dots.appendChild(t);});
+var dd=document.getElementById('sc-dday'),nx=document.getElementById('sc-next'),ic=document.getElementById('sc-ic');
+if(up.length){var diff=Math.round((up[0].d-today)/864e5);dd.textContent=diff===0?'오늘 마감':'D-'+diff;var same=up.filter(function(x){return +x.d===+up[0].d;});nx.textContent=(up[0].d.getMonth()+1)+'월 '+up[0].d.getDate()+'일 · '+same[0].l.replace(/\s*\(.*?\)/,'')+(same.length>1?' 외 '+(same.length-1)+'건':'');ic.classList.add('warn');ic.innerHTML='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 8v4.2l2.8 1.8"/></svg>';}
+else{dd.textContent='이번 달 기한 완료';nx.textContent='다음 달 일정은 세무일정에서 확인하세요';}
+function row(lab,cls,arr){if(!arr.length)return '';return '<div class="sc-row"><span class="sc-lab '+cls+'">'+lab+'</span><ul>'+arr.map(function(x){return '<li>'+x.l+' <em>'+(x.d.getMonth()+1)+'/'+x.d.getDate()+'</em></li>';}).join('')+'</ul></div>';}
+document.getElementById('sc-box').innerHTML=row('예정','up',up)+row('지난 일정','past',items.filter(function(x){return x.past;}));
+})();</script></body></html>
