@@ -177,6 +177,29 @@
 .sc-row li em{font-style:normal; color:rgba(255,255,255,.5); font-size:12.5px; margin-left:2px;}
 .sc-row li{padding:0 !important; border:0 !important; width:100%;} 
 @media (max-width:900px){.sc-in{grid-template-columns:1fr;} .sc-slot{display:none;}} @media (max-width:560px){.sc{padding:0 16px 64px;} .sc-card{padding:24px 18px;} .sc-t{font-size:19px;} .sc-row{flex-direction:column; gap:6px;} .sc-row li{padding:0; border:0; width:100%;}}
+</style><style id="scline">
+.sc-mid{position:static !important; display:flex !important; flex-direction:row !important; align-items:center !important; gap:14px !important; margin:26px 0 24px;}
+.sc-mid>div{display:flex; flex-direction:column; gap:2px;} .sc-mid span#sc-next{text-align:left !important;}
+.sc-ic{width:40px !important; height:40px !important; flex:none;} .sc-ic svg{width:22px !important; height:22px !important;}
+.sc-mid b{font-size:26px !important; line-height:1.1;}
+.sc-line{position:relative; padding:0 4px 4px;}
+.sc-track{position:relative; height:10px; border-radius:999px; background:#2a2d34;}
+.sc-fill{position:absolute; left:0; top:0; bottom:0; width:0; border-radius:999px; background:#2fe06b; transition:width 1.4s cubic-bezier(.22,1,.36,1);}
+.sc-today{position:absolute; top:50%; width:4px; height:20px; border-radius:2px; background:#fff; transform:translate(-50%,-50%); box-shadow:0 0 0 3px rgba(255,255,255,.15);}
+.sc-marks{position:relative; height:26px; margin:0 0 6px;}
+.sc-mk{position:absolute; top:-12px; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:6px;}
+.sc-mk i{width:14px; height:14px; margin-top:0; border-radius:50%; background:#151619; border:3px solid #ffb020; box-sizing:border-box;}
+.sc-mk.past i{background:#2fe06b; border-color:#2fe06b;}
+.sc-mk em{font-style:normal; font-size:11.5px; font-weight:600; color:rgba(255,255,255,.65); white-space:nowrap;}
+.sc-ends{display:flex; justify-content:space-between; font-size:11px; color:rgba(255,255,255,.35); margin-top:-2px;}
+</style><style id="hcmob">@media (max-width:640px){.hc-vis{display:none !important;} .hc-slide{gap:0 !important;} .hc-tabs{margin-top:28px !important;}}</style><style id="sccol">
+.sc-ic.warn{background:#3cee70 !important;}
+.sc-mk i{border-color:#3cee70 !important;}
+.sc-fill{background:rgba(60,238,112,.38) !important;} .sc-mk.past i{background:#2f8a4b !important; border:2px solid #151619 !important;}
+.sc-mk.past em{color:rgba(255,255,255,.4) !important;}
+.sc-lab.up{color:#3cee70 !important;}
+.sc-lab.past{color:rgba(60,238,112,.45) !important;}
+.sc-row:has(.sc-lab.past) li{color:rgba(255,255,255,.45) !important;} .sc-row:has(.sc-lab.past) li em{color:rgba(255,255,255,.3) !important;}
 </style></head><body><div class="nb" role="region" aria-label="운영 안내"><div class="nb-in"><div class="nb-track"><div class="nb-grp"><p class="nb-tx"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p></div><div class="nb-grp" aria-hidden="true"><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p><p class="nb-tx" aria-hidden="true"><span class="nb-ic" aria-hidden="true">i</span><span>현재 <b>임시 운영</b> 중인 페이지입니다. 정식 페이지는 <b>(예정) 12월 1일</b>에 공개됩니다.</span></p></div></div></div></div>
 
 
@@ -478,8 +501,8 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <section class="sc" aria-label="이번 달 세무일정">
   <div class="sc-in"><div class="sc-card">
     <div class="sc-hd"><div><h2 class="sc-t" id="sc-t">이번 달 세무일정</h2><p class="sc-u" id="sc-u"></p></div><a class="sc-go" href="calendar.html">바로가기</a></div>
-    <div class="sc-gauge"><svg viewBox="0 0 320 170" aria-hidden="true"><path class="sc-arc-bg" d="M20 160 A140 140 0 0 1 300 160"/><path class="sc-arc" id="sc-arc" d="M20 160 A140 140 0 0 1 300 160"/><g id="sc-dots"></g></svg>
-      <div class="sc-mid"><span class="sc-ic" id="sc-ic"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></span><b id="sc-dday"></b><span id="sc-next"></span></div></div>
+    <div class="sc-mid"><span class="sc-ic" id="sc-ic"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></span><div><b id="sc-dday"></b><span id="sc-next"></span></div></div>
+    <div class="sc-line"><div class="sc-track"><i class="sc-fill" id="sc-fill"></i><span class="sc-today" id="sc-today"></span></div><div class="sc-marks" id="sc-dots"></div></div>
     <div class="sc-box" id="sc-box"></div>
   </div><div class="sc-slot" aria-hidden="true"></div></div>
 </section>
@@ -611,16 +634,14 @@ function due(y,str){var m=/(\d+)월\s*(\d+)일/.exec(str);var dt=new Date(y,+m[1
 var now=new Date(),y=now.getFullYear(),mo=now.getMonth()+1,today=new Date(y,now.getMonth(),now.getDate());
 var last=new Date(y,mo,0).getDate();
 document.getElementById('sc-t').textContent=mo+'월 세무일정';
-document.getElementById('sc-u').textContent=String(y).slice(2)+'.'+pad(mo)+'.'+pad(now.getDate())+' 기준';
+document.getElementById('sc-u').textContent=y+'.'+pad(mo)+'.'+pad(now.getDate())+'. 기준';
 var items=(SCHEDULE[mo]||[]).map(function(it){var d=due(y,it.date);return {l:it.label,d:d,past:d<today};});
 var groups={};items.forEach(function(it){var k=it.d.getTime();(groups[k]=groups[k]||[]).push(it);});
 var up=items.filter(function(x){return !x.past;}).sort(function(a,b){return a.d-b.d;});
-var arc=document.getElementById('sc-arc'),L=arc.getTotalLength(),frac=(now.getDate()-1+now.getHours()/24)/last;
-arc.style.strokeDasharray=L;arc.style.strokeDashoffset=L;
-requestAnimationFrame(function(){requestAnimationFrame(function(){arc.style.strokeDashoffset=L*(1-frac);});});
-var dots=document.getElementById('sc-dots'),ns='http://www.w3.org/2000/svg';
-Object.keys(groups).forEach(function(k){var d=new Date(+k);if(d.getMonth()+1!==mo)return;var f=(d.getDate()-.5)/last,p=arc.getPointAtLength(L*f);var c=document.createElementNS(ns,'circle');c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.setAttribute('r',7);c.setAttribute('class','sc-dot'+(d<today?' past':''));dots.appendChild(c);
-var t=document.createElementNS(ns,'text');var ang=Math.PI*(1-f);t.setAttribute('x',160+112*Math.cos(ang));t.setAttribute('y',160-112*Math.sin(ang)+4);t.setAttribute('class','sc-dl');t.textContent=d.getDate()+'일';dots.appendChild(t);});
+var frac=(now.getDate()-1+now.getHours()/24)/(last-1);var fill=document.getElementById('sc-fill');document.getElementById('sc-today').style.left=(frac*100)+'%';
+requestAnimationFrame(function(){requestAnimationFrame(function(){fill.style.width=(frac*100)+'%';});});
+var dots=document.getElementById('sc-dots');
+Object.keys(groups).forEach(function(k){var d=new Date(+k);if(d.getMonth()+1!==mo)return;var f=(d.getDate()-1)/(last-1);var m=document.createElement('span');m.className='sc-mk'+(d<today?' past':'');m.style.left=(f*100)+'%';m.innerHTML='<i></i><em>'+d.getDate()+'일</em>';dots.appendChild(m);});
 var dd=document.getElementById('sc-dday'),nx=document.getElementById('sc-next'),ic=document.getElementById('sc-ic');
 if(up.length){var diff=Math.round((up[0].d-today)/864e5);dd.textContent=diff===0?'오늘 마감':'D-'+diff;var same=up.filter(function(x){return +x.d===+up[0].d;});nx.textContent=(up[0].d.getMonth()+1)+'월 '+up[0].d.getDate()+'일 · '+same[0].l.replace(/\s*\(.*?\)/,'')+(same.length>1?' 외 '+(same.length-1)+'건':'');ic.classList.add('warn');ic.innerHTML='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 8v4.2l2.8 1.8"/></svg>';}
 else{dd.textContent='이번 달 기한 완료';nx.textContent='다음 달 일정은 세무일정에서 확인하세요';}
