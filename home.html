@@ -647,4 +647,7 @@ if(up.length){var diff=Math.round((up[0].d-today)/864e5);dd.textContent=diff===0
 else{dd.textContent='이번 달 기한 완료';nx.textContent='다음 달 일정은 세무일정에서 확인하세요';}
 function row(lab,cls,arr){if(!arr.length)return '';return '<div class="sc-row"><span class="sc-lab '+cls+'">'+lab+'</span><ul>'+arr.map(function(x){return '<li>'+x.l+' <em>'+(x.d.getMonth()+1)+'/'+x.d.getDate()+'</em></li>';}).join('')+'</ul></div>';}
 document.getElementById('sc-box').innerHTML=row('예정','up',up)+row('지난 일정','past',items.filter(function(x){return x.past;}));
-})();</script><style id="cta4">html body .topbar .topbar-inner .tb-cta{border-radius:4px !important;}</style></body></html>
+})();</script><style id="cta4">html body .topbar .topbar-inner .tb-cta{border-radius:4px !important;}</style><script id="fitfold">(function(){var hc=document.querySelector('.hc'),rc=document.querySelector('.rc'),sc=document.querySelector('.sc');if(!hc||!rc||!sc)return;
+function fit(){hc.style.paddingBottom='';rc.style.paddingBottom='';if(window.innerWidth<901)return;var top=sc.getBoundingClientRect().top+window.scrollY;var extra=window.innerHeight-top+24;if(extra<=0)return;
+var a=parseFloat(getComputedStyle(hc).paddingBottom),b=parseFloat(getComputedStyle(rc).paddingBottom);var x=Math.min(extra*0.4,64);hc.style.setProperty('padding-bottom',(a+x)+'px','important');rc.style.setProperty('padding-bottom',(b+extra-x)+'px','important');}
+fit();window.addEventListener('load',fit);var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,120);});})();</script></body></html>
