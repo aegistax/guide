@@ -298,6 +298,7 @@ body.calc-detail .sg-sec{display:none;}
   .img-card .ic-sec.res .ic-row .v{font-size:15px; color:#1f4d7d;}
   .img-card .ic-badge{display:inline-block; margin:2px 6px 6px 0; padding:3px 10px; font-size:11.5px; font-weight:600; border-radius:999px; background:#e4edf8; color:#1f4d7d;}
   .img-card .ic-note{margin-top:8px; font-size:11.5px; color:#7b8496; line-height:1.6;}
+  .img-card .ic-url{margin-top:8px; font-size:12px; font-weight:700; color:#1f4d7d; text-align:center; letter-spacing:.01em;}
   .img-card .ic-foot{margin-top:16px; padding-top:10px; border-top:1px solid #d8e2ee; font-size:11px; color:#7b8496; text-align:center; line-height:1.6; word-break:keep-all;}
 </style>
 
@@ -1376,7 +1377,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
       }
     });
     close();
-    html += '<div class="ic-foot">' + esc(foot || '※ 단순 참고용 계산 결과입니다. 정확한 판단 또는 계산은 세무사 상담을 통해 확인하시기 바랍니다.') + '</div>';
+    html += '<div class="ic-foot">' + esc(foot || '※ 단순 참고용 계산 결과입니다. 정확한 판단 또는 계산은 세무사 상담을 통해 확인하시기 바랍니다.') + '</div><div class="ic-url">직접 계산해 보기 · guide.aegistax.kr/calculator.html</div>';
     var el = document.createElement('div'); el.className = 'img-card'; el.innerHTML = html;
     return {el: el, title: title};
   }
@@ -1403,7 +1404,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
     makeImageBlob(card).then(function(r){
       var d = new Date(), stamp = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
       var file = new File([r.blob], r.title.replace(/[\\/:*?"<>|\s]+/g, '_') + '_계산결과_' + stamp + '.png', {type: 'image/png'});
-      if(navigator.canShare && navigator.canShare({files: [file]})) return navigator.share({files: [file], title: title, text: text});
+      if(navigator.canShare && navigator.canShare({files: [file]})) return navigator.share({files: [file], title: title, text: title + '입니다.\n직접 계산해 보기: https://guide.aegistax.kr/calculator.html'});
       return navigator.share({title: title, text: text});
     }, function(){ return navigator.share({title: title, text: text}); }).then(done, fail);
   }
