@@ -38,6 +38,15 @@
 .lb-tw.c td,.lb-tw.c th{text-align:left !important;}
 .lb-tw td.span{background:#fafafa !important; font-weight:700 !important;}
 @media (max-width:640px){.lb-tw table{font-size:14px !important;} .lb-tw th,.lb-tw td{padding:12px 14px !important;}}
+</style><style id="clcall">
+.cl-note.cl-call{background:#f7f8fa !important; border:1px solid #e3e6ec !important; border-radius:4px !important; padding:16px 20px !important; margin:18px 0 24px !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft);}
+.cl-call .cl-call-t{display:flex; align-items:center; gap:8px; margin:0 0 8px !important; font-size:15px !important; font-weight:700; line-height:1.5; color:var(--ink) !important;}
+.cl-call .cl-call-ic{flex:none; width:18px; height:18px; border-radius:50%; background:#6b7280; color:#fff; font:700 11.5px/18px Georgia,serif; font-style:italic; text-align:center;}
+.cl-call ul{margin:0 !important; padding:0 !important; list-style:none !important; border:0 !important; background:none !important;}
+.cl-call li{position:relative; padding:0 0 0 16px !important; margin:0 !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft); word-break:keep-all; border:0 !important; background:none !important;}
+.cl-call li::before{content:"·" !important; position:absolute; left:4px; top:0; font-weight:700; color:var(--ink-soft); background:none !important; width:auto !important; height:auto !important; border:0 !important;}
+.cl-call li b,.cl-grid .cl-call li b{color:var(--ink) !important;}
+@media (max-width:640px){.cl-note.cl-call{padding:14px 16px !important;}}
 </style></head><body>
 
 
@@ -542,7 +551,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
         <div class="cl-sum">챗GPT, Gemini, 노션 같은 해외 서비스는 국내 서비스와 처리 방법이 조금 다릅니다. 부가세와 소득세를 나눠서 보면 쉽습니다.</div>
         <div class="cl-body">
 <h2 id="s1">해외 결제분은 왜 따로 챙겨야 하나요?</h2><p>세무대리인은 사업용 신용카드나 법인카드 사용 내역을 조회할 수 있지만, <b>해외 결제 내역은 시스템에서 자동으로 확인되지 않습니다.</b> 비용 처리가 누락되지 않으려면 사업자가 카드사에서 <b>이용대금명세서를 받아 따로 전달</b>해 주셔야 합니다.</p>
-<div class="cl-note"><b>해외 결제분은 사업장에서 챙겨 주세요</b> — 따로 전달하지 않으면 세무대리인이 확인할 수 없습니다. AI 서비스 외에도 MS 오피스, 클라우드, 해외 출장비 등 해외 결제가 있다면 함께 보내 주세요.</div>
+<div class="cl-note cl-call"><p class="cl-call-t"><span class="cl-call-ic" aria-hidden="true">i</span>해외 결제분은 사업장에서 챙겨 주세요</p><ul><li>따로 전달하지 않으면 세무대리인이 확인할 수 없습니다. AI 서비스 외에도 MS 오피스, 클라우드, 해외 출장비 등 해외 결제가 있다면 함께 보내 주세요.</li></ul></div>
 <h2 id="s2">부가세는 어떻게 처리되나요?</h2><p>국외 사업자가 국내 <b>사업자</b>에게 제공하는 전자적 용역(AI 구독, 소프트웨어, 클라우드 등)은 부가세를 과세하지 않습니다. 그래서 구독료에 부가세가 없고, 매입세액 공제도 적용하지 않습니다.</p><p>다만 <b class="hl">결제 화면에서 사업자번호를 꼭 입력</b>해야 사업자 거래로 인정됩니다. 입력하지 않으면 개인 소비자로 보아 부가세 10%가 붙어 결제되고, 이 부가세는 공제받을 수 없습니다.</p>
 <h2 id="s3">소득세·법인세 비용 처리는 되나요?</h2><p>사업과 관련해 이용했다면 다른 비용과 똑같이 <b>전액 비용 처리</b>할 수 있습니다. 해외 결제분은 자동 조회되지 않으니 <b>이용 사실과 결제 내역을 따로 전달</b>해 주세요.</p>
 <h2 id="s4">왜 국내 서비스와 처리 방법이 다른가요?</h2><p>원칙적으로 국내에서 쓰는 서비스에는 10% 부가세가 붙습니다. 하지만 오픈AI, 구글 같은 국외 사업자는 세금계산서를 발급할 수 없어, 사업자가 부가세를 내도 공제받을 길이 없습니다. 이런 문제를 막기 위해 <b>국외 사업자가 국내 사업자에게 공급하는 전자적 용역은 부가세를 과세하지 않도록</b> 정해 두었습니다. 그래서 사업자번호를 넣어 결제하면 부가세 없이 결제되고, 그 금액은 종합소득세(법인세) 비용에 반영됩니다.</p>

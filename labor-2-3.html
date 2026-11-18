@@ -38,6 +38,15 @@
 .lb-tw.c td,.lb-tw.c th{text-align:left !important;}
 .lb-tw td.span{background:#fafafa !important; font-weight:700 !important;}
 @media (max-width:640px){.lb-tw table{font-size:14px !important;} .lb-tw th,.lb-tw td{padding:12px 14px !important;}}
+</style><style id="clcall">
+.cl-note.cl-call{background:#f7f8fa !important; border:1px solid #e3e6ec !important; border-radius:4px !important; padding:16px 20px !important; margin:18px 0 24px !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft);}
+.cl-call .cl-call-t{display:flex; align-items:center; gap:8px; margin:0 0 8px !important; font-size:15px !important; font-weight:700; line-height:1.5; color:var(--ink) !important;}
+.cl-call .cl-call-ic{flex:none; width:18px; height:18px; border-radius:50%; background:#6b7280; color:#fff; font:700 11.5px/18px Georgia,serif; font-style:italic; text-align:center;}
+.cl-call ul{margin:0 !important; padding:0 !important; list-style:none !important; border:0 !important; background:none !important;}
+.cl-call li{position:relative; padding:0 0 0 16px !important; margin:0 !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft); word-break:keep-all; border:0 !important; background:none !important;}
+.cl-call li::before{content:"·" !important; position:absolute; left:4px; top:0; font-weight:700; color:var(--ink-soft); background:none !important; width:auto !important; height:auto !important; border:0 !important;}
+.cl-call li b,.cl-grid .cl-call li b{color:var(--ink) !important;}
+@media (max-width:640px){.cl-note.cl-call{padding:14px 16px !important;}}
 </style></head><body>
 
 
@@ -542,7 +551,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
         <div class="cl-sum">4대보험료는 보수월액(과세대상 월 소득)을 기준으로 산정되며, 산재보험을 제외한 나머지는 근로자와 사업주가 절반씩 부담합니다.</div>
         <div class="cl-body">
 <h2 id="s1">보험별 요율</h2><div class="lb-tw c"><table><thead><tr><th>보험</th><th>총 요율</th><th>근로자</th><th>사업주</th></tr></thead><tbody><tr><td>국민연금</td><td>9.5%</td><td>4.75%</td><td>4.75%</td></tr><tr><td>건강보험</td><td>7.19%</td><td>3.595%</td><td>3.595%</td></tr><tr><td>장기요양보험</td><td>0.9448%</td><td>0.4724%</td><td>0.4724%</td></tr><tr><td>고용보험(실업급여)</td><td>1.8%</td><td>0.9%</td><td>0.9% + 고용안정 요율 별도</td></tr><tr><td>산재보험</td><td>평균 1.47%</td><td>–</td><td><b class="hl">전액 부담</b></td></tr></tbody></table></div>
-<div class="cl-note"><b>국민연금 요율, 매년 단계적으로 오릅니다</b> — 2025년 3월 국회를 통과한 개정 국민연금법에 따라 2026년부터 보험료율이 <b>매년 0.5%p씩 8년간</b> 인상됩니다(사업장가입자는 근로자·사업주가 각각 0.25%p씩 분담). 2026년 9.5%에서 시작해 <b>2033년에는 13.0%</b>까지 오를 예정이며, 모든 연령대에 동일하게 적용됩니다(동시에 소득대체율도 40%에서 43%로 상향). 매년 1월 급여 계산 시 그 해 요율을 다시 확인하시길 권합니다.</div>
+<div class="cl-note cl-call"><p class="cl-call-t"><span class="cl-call-ic" aria-hidden="true">i</span>국민연금 요율, 매년 단계적으로 오릅니다</p><ul><li>2025년 3월 국회를 통과한 개정 국민연금법에 따라 2026년부터 보험료율이 <b>매년 0.5%p씩 8년간</b> 인상됩니다(사업장가입자는 근로자·사업주가 각각 0.25%p씩 분담). 2026년 9.5%에서 시작해 <b>2033년에는 13.0%</b>까지 오를 예정이며, 모든 연령대에 동일하게 적용됩니다(동시에 소득대체율도 40%에서 43%로 상향). 매년 1월 급여 계산 시 그 해 요율을 다시 확인하시길 권합니다.</li></ul></div>
 <h2 id="s2">국민연금 산정 시 상한·하한액은요?</h2><p>기준소득월액 기준으로 <b>상한 659만 원, 하한 41만 원</b> 범위 내에서만 부과됩니다. 상한 초과 시에도 659만 원 기준 보험료(총 626,050원, 각 313,025원)만 납부합니다.</p>
 <h2 id="s3">장기요양보험료는 어떻게 계산되나요?</h2><p>보수월액 × 0.9448% 또는 건강보험료 × 약 13.14%, 두 방식의 결과는 동일하며 건강보험료와 별도로 합산 표시됩니다.</p>
 <h2 id="s4">급여에서 어떤 금액을 기준으로 차감하나요?</h2><p>식대(월 20만 원 이하) 등 비과세 항목을 제외한 <b>보수월액(과세대상 월 소득)</b>을 기준으로 원천징수합니다. 자세한 비과세 항목은 <a href="labor-2-4.html">4대보험 부담, 합법적으로 줄이는 법</a>을 참고하세요.</p>

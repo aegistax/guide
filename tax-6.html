@@ -38,6 +38,15 @@
 .lb-tw.c td,.lb-tw.c th{text-align:left !important;}
 .lb-tw td.span{background:#fafafa !important; font-weight:700 !important;}
 @media (max-width:640px){.lb-tw table{font-size:14px !important;} .lb-tw th,.lb-tw td{padding:12px 14px !important;}}
+</style><style id="clcall">
+.cl-note.cl-call{background:#f7f8fa !important; border:1px solid #e3e6ec !important; border-radius:4px !important; padding:16px 20px !important; margin:18px 0 24px !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft);}
+.cl-call .cl-call-t{display:flex; align-items:center; gap:8px; margin:0 0 8px !important; font-size:15px !important; font-weight:700; line-height:1.5; color:var(--ink) !important;}
+.cl-call .cl-call-ic{flex:none; width:18px; height:18px; border-radius:50%; background:#6b7280; color:#fff; font:700 11.5px/18px Georgia,serif; font-style:italic; text-align:center;}
+.cl-call ul{margin:0 !important; padding:0 !important; list-style:none !important; border:0 !important; background:none !important;}
+.cl-call li{position:relative; padding:0 0 0 16px !important; margin:0 !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft); word-break:keep-all; border:0 !important; background:none !important;}
+.cl-call li::before{content:"·" !important; position:absolute; left:4px; top:0; font-weight:700; color:var(--ink-soft); background:none !important; width:auto !important; height:auto !important; border:0 !important;}
+.cl-call li b,.cl-grid .cl-call li b{color:var(--ink) !important;}
+@media (max-width:640px){.cl-note.cl-call{padding:14px 16px !important;}}
 </style></head><body>
 
 
@@ -546,7 +555,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <tr><td>소유자</td><td>본인</td><td>리스사</td><td>렌트사</td></tr><tr><td>번호판</td><td>일반</td><td>일반</td><td>하·허·호</td></tr><tr><td>자동차 보험</td><td>본인 가입(경력 인정)</td><td>본인 가입(경력 인정)</td><td>렌트사 보험</td></tr><tr><td>취득세</td><td>본인 부담</td><td>리스료에 포함</td><td>렌트료에 포함</td></tr><tr><td>자동차세</td><td>본인 부담</td><td>리스료 포함 가능</td><td>렌트료에 포함</td></tr><tr><td>부채 인식</td><td>대출로 인식</td><td>대출로 인식</td><td>부채 아님</td></tr><tr><td>정비 책임</td><td>본인</td><td>본인(선택 가능)</td><td>업체 관리 가능</td></tr>
 </tbody></table></div>
 <h2 id="s3">할부로 사면 어떤가요?</h2><p>일시불로 사면 이자가 없어 <b>가장 저렴하게</b> 마련할 수 있지만, 자금 부담이 커서 대부분 할부를 이용합니다. 할부원금은 사업장의 부채로, <b>할부이자는 매월 이자비용으로</b> 처리합니다. 부채비율 때문에 대출이 걱정되는 사업장이라면 할부도 부채로 잡힌다는 점에 유의하세요.</p>
-<h2 id="s4">리스는 어떤가요?</h2><p>매월 리스료를 내는 방식이며, <b>리스료는 비용 처리</b>할 수 있습니다. 차량 교체 주기가 짧다면 유리할 수 있지만, 리스료에 이자 성격의 비용이 들어 있어 전체 비용은 구입보다 높은 것이 일반적입니다. 고가 차량은 리스료도 한도 안에서만 비용 처리되니 계약 전에 상담해 주세요.</p><div class="cl-note"><b>계약할 때 사업자번호로 계산서를 요청하세요</b> — 사업자번호로 계산서를 받아야 리스료를 비용 처리할 수 있습니다.</div>
+<h2 id="s4">리스는 어떤가요?</h2><p>매월 리스료를 내는 방식이며, <b>리스료는 비용 처리</b>할 수 있습니다. 차량 교체 주기가 짧다면 유리할 수 있지만, 리스료에 이자 성격의 비용이 들어 있어 전체 비용은 구입보다 높은 것이 일반적입니다. 고가 차량은 리스료도 한도 안에서만 비용 처리되니 계약 전에 상담해 주세요.</p><div class="cl-note cl-call"><p class="cl-call-t"><span class="cl-call-ic" aria-hidden="true">i</span>계약할 때 사업자번호로 계산서를 요청하세요</p><ul><li>사업자번호로 계산서를 받아야 리스료를 비용 처리할 수 있습니다.</li></ul></div>
 <h2 id="s5">장기렌트는 어떤가요?</h2><p>리스처럼 매월 이용료를 내지만, <b>렌트료에는 부가세가 포함</b>되어 있습니다. 리스는 금융용역이라 부가세가 없고, 일반 승용차는 렌트료의 부가세를 공제받을 수 없으므로 그만큼 리스가 저렴할 수 있습니다.</p><p>대신 렌트는 렌트사가 보험에 가입하므로 <b>사고가 나도 내 보험료가 오르지 않는</b> 장점이 있습니다. 그래서 <b class="hl">여러 직원이 함께 운행하는 차량</b>이라면 렌트가 유리할 수 있습니다. 렌트료도 반드시 사업자번호로 세금계산서를 받아 주세요.</p>
         </div>
         <div class="cl-foot">

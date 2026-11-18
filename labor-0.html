@@ -38,6 +38,15 @@
 .lb-tw.c td,.lb-tw.c th{text-align:left !important;}
 .lb-tw td.span{background:#fafafa !important; font-weight:700 !important;}
 @media (max-width:640px){.lb-tw table{font-size:14px !important;} .lb-tw th,.lb-tw td{padding:12px 14px !important;}}
+</style><style id="clcall">
+.cl-note.cl-call{background:#f7f8fa !important; border:1px solid #e3e6ec !important; border-radius:4px !important; padding:16px 20px !important; margin:18px 0 24px !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft);}
+.cl-call .cl-call-t{display:flex; align-items:center; gap:8px; margin:0 0 8px !important; font-size:15px !important; font-weight:700; line-height:1.5; color:var(--ink) !important;}
+.cl-call .cl-call-ic{flex:none; width:18px; height:18px; border-radius:50%; background:#6b7280; color:#fff; font:700 11.5px/18px Georgia,serif; font-style:italic; text-align:center;}
+.cl-call ul{margin:0 !important; padding:0 !important; list-style:none !important; border:0 !important; background:none !important;}
+.cl-call li{position:relative; padding:0 0 0 16px !important; margin:0 !important; font-size:14.5px; line-height:1.75; color:var(--ink-soft); word-break:keep-all; border:0 !important; background:none !important;}
+.cl-call li::before{content:"·" !important; position:absolute; left:4px; top:0; font-weight:700; color:var(--ink-soft); background:none !important; width:auto !important; height:auto !important; border:0 !important;}
+.cl-call li b,.cl-grid .cl-call li b{color:var(--ink) !important;}
+@media (max-width:640px){.cl-note.cl-call{padding:14px 16px !important;}}
 </style></head><body>
 
 
@@ -544,7 +553,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});}
 <p>상시근로자 수는 직원 ‘명수’가 아니라 <b>1개월간 사용한 근로자의 연인원을 가동일수로 나눈 값</b>으로 계산합니다. 정규직·계약직·아르바이트를 모두 포함하되, 사업주 본인과 동거 친족, 등기임원, 파견근로자, 독립적인 프리랜서는 제외합니다.</p>
 <h2 id="s1">상시근로자 수 산정 공식</h2><div class="cl-quote"><dl><dt>기본 산식</dt><dd><b>1개월간 총 연인원 ÷ 1개월간 사업장 가동일수</b></dd><dt>1/2 기준</dt><dd>산식 결과가 5인 미만이라도 5인 이상 근무한 날이 가동일수의 <b>1/2 이상</b>이면 5인 이상 사업장으로, 그 반대의 경우도 동일하게 판단합니다.</dd><dt>포함 대상</dt><dd>정규직·계약직·아르바이트 등 고용 형태 불문 (육아휴직·병가 중이라도 근로계약 유지 시 포함)</dd><dt>제외 대상</dt><dd>사업주 본인, 동거 친족, 법인 등기임원, 파견근로자, 독립 프리랜서</dd><dt>동거 친족 포함 예외</dt><dd>동거 친족이 아닌 일반 근로자가 단 1명이라도 함께 근무하고 있다면, 그 사업장에서는 동거 친족도 상시근로자 수에 포함됩니다 (근로기준법 시행령 제7조의2 제4항 제2호).</dd><dt>여러 사업장 운영 시 주의</dt><dd>동일한 사업주가 여러 개의 사업을 운영하더라도 장소적으로 분리되어 있지 않거나 실질적으로 하나의 사업으로 운영된다고 판단되면, 각 사업장의 근로자 수를 합산해 5인 이상 사업장으로 판단될 수 있습니다.</dd></dl><p class="cl-q-note"><b>쉽게 설명하면</b> — 한 달 동안 매일 출근한 인원수를 모두 더한 뒤, 그 달에 실제로 문을 연 날수로 나눈 ‘하루 평균 근무 인원’이라고 생각하시면 됩니다.</p></div>
 <h2 id="s2">5인 미만 VS 5인 이상 — 주요 적용 법규 비교</h2><div class="lb-tw"><table><thead><tr><th>구분 항목</th><th>상시 5인 미만</th><th>상시 5인 이상</th></tr></thead><tbody><tr><td>가산수당 (연장·야간·휴일)</td><td>미적용 (기본 시급만 지급)</td><td><b class="hl">적용 (통상임금 50% 가산)</b></td></tr><tr><td>연차유급휴가</td><td>미적용</td><td><b class="hl">적용 (1년 80% 이상 출근 시 15일)</b></td></tr><tr><td>부당해고 제한·서면통지</td><td>미적용 (정당한 사유 없이도 해고 가능)</td><td><b class="hl">적용 (정당한 사유 및 서면통지 필요)</b></td></tr><tr><td>부당해고 구제신청</td><td>불가</td><td><b class="hl">가능 (노동위원회)</b></td></tr><tr><td>법정 근로시간 (주 52시간)</td><td>제한 없음</td><td><b class="hl">주 40시간 + 연장 12시간 제한</b></td></tr><tr><td>관공서 공휴일(빨간 날) 유급</td><td>미적용</td><td><b class="hl">적용</b></td></tr><tr><td>휴업수당</td><td>미적용</td><td><b class="hl">적용 (평균임금 70% 이상)</b></td></tr></tbody></table></div>
-<div class="cl-note"><b>그러나 5인 미만이어도 예외 없이 지켜야 하는 것</b> — 근로계약서 작성·교부, 임금명세서 교부, 최저임금 준수, 휴게시간 부여, 주휴수당 지급, 퇴직금 지급, 해고예고제도.</div>
+<div class="cl-note cl-call"><p class="cl-call-t"><span class="cl-call-ic" aria-hidden="true">i</span>그러나 5인 미만이어도 예외 없이 지켜야 하는 것</p><ul><li>근로계약서 작성·교부, 임금명세서 교부, 최저임금 준수, 휴게시간 부여, 주휴수당 지급, 퇴직금 지급, 해고예고제도.</li></ul></div>
         </div>
         <div class="cl-foot">
           <div class="cl-pn" hidden><a class="pv ph" href="labor.html"><small>&nbsp;</small><b>&nbsp;</b></a><a class="nx" href="labor-1-1.html"><small>다음 글 →</small><b>근로계약서, 안 쓰면 어떻게 되나요</b></a></div>
